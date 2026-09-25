@@ -46,6 +46,18 @@ VeloApp (veloapp.es) to marketplace w Hiszpanii łączący klientów, którzy po
 - **Oceny:** klienci wystawiają oceny fachowcom.
 - **Wygląd:** prosta, spokojna kolorystyka, bez efekciarstwa. Najpierw czytelność i łatwość obsługi, także na telefonie.
 
+## Ochrona przed omijaniem płatności (obowiązkowe w MVP)
+Fachowiec płaci za odebranie leada, więc dane kontaktowe nie mogą "wyciec" wcześniej.
+- **Filtr danych kontaktowych działa na serwerze** (Supabase, np. Edge Function lub trigger), nie tylko w przeglądarce. Wzór logiki: funkcja `detectContactInfo` w prototypie `index.html`.
+- Filtr wykrywa: numery telefonów (min. 8 cyfr, także z odstępami/kropkami/myślnikami, +34/+48/+44, cyfry arabskie), e-maile (także "at", "małpa", "arroba"), linki, wa.me, @nazwy kont, nazwy komunikatorów i sieci społecznościowych, liczby zapisane słownie (PL/ES/EN). Daty nie mogą być blokowane.
+- Filtrowane pola: opis zlecenia, opis profilu fachowca ("O mnie"), podpisy zdjęć, opinie, wiadomości w czacie.
+- Wykryte dane zamieniamy na "[ukryte]" i pokazujemy przyjazny komunikat (ochrona przed spamem), nigdy nie odrzucamy całego tekstu bez wyjaśnienia.
+- **Czat po odebraniu leada:** fachowiec nie może podać kontaktu, dopóki klient nie odpowie w czacie. Po odpowiedzi klienta filtr się wyłącza, a lead przestaje podlegać zwrotowi punktów.
+- **Zdjęcia** (zlecenia i portfolio): automatyczne rozpoznawanie tekstu (OCR) i kodów QR; wykryte dane zamazać albo wysłać do sprawdzenia w panelu admina.
+- Przed odebraniem leada fachowiec widzi tylko przybliżoną lokalizację i imię klienta z inicjałem nazwiska.
+- Każde wykrycie zapisujemy (kto, kiedy, gdzie). Kary: ostrzeżenie → blokada 7 dni → usunięcie konta. W panelu admina lista kont z wieloma wykryciami i fachowców z nietypowo dużą liczbą zwrotów.
+- Regulamin musi zawierać zakaz podawania danych kontaktowych przed odebraniem leada.
+
 ## Bezpieczeństwo (zawsze)
 - Nigdy nie umieszczaj kluczy, haseł ani sekretów w kodzie ani w repozytorium. Używaj zmiennych środowiskowych i powiedz mi, gdzie je wpisać.
 - W Supabase włączaj Row Level Security (RLS) dla każdej tabeli i sprawdzaj, że użytkownik widzi tylko swoje dane.

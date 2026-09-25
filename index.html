@@ -542,6 +542,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
   .grid-2{grid-template-columns:1fr;}
   .hero h1{font-size:32px;}
 }
+.contact-guard-note{background:var(--amber-tint);color:var(--amber-deep);border-radius:8px;padding:10px 12px;font-size:13px;line-height:1.5;margin:8px 0 12px;}
 </style>
 </head>
 <body>
@@ -627,7 +628,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       <div class="job-searchbar-divider"></div>
       <div class="job-searchbar-field">
         <svg viewBox="0 0 24 24"><path d="M12 2c4 5 7 9 7 13a7 7 0 1 1-14 0c0-4 3-8 7-13Z"/><circle cx="12" cy="12" r="2.3"/></svg>
-        <input type="text" id="homeJobLocation" value="Wrocław" placeholder="Lokalizacja">
+        <input type="text" id="homeJobLocation" value="Marbella" placeholder="Lokalizacja">
       </div>
       <button class="btn btn-primary job-searchbar-btn" id="homeJobSearchBtn" data-i18n="btn_search_jobs">Szukaj</button>
     </div>
@@ -643,23 +644,23 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
     <div id="homeJobsPreviewWrap">
       <div class="list-title" style="margin-top:28px;" data-i18n="jobs_home_preview_title">Ostatnio dodane</div>
       <div id="homeJobsPreview" class="job-preview-grid">
-        <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Camarera de pisos', company:'Hotel Ibis Wrocław', location:'Wrocław, Krzyki', salary:'23 zł/h', industryKey:'industry_hotel', desc:'Sprzątanie i przygotowanie pokoi hotelowych zgodnie ze standardem hotelu. Praca w systemie zmianowym.'})">
+        <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Camarera de pisos', company:'Hotel Playa Marbella', location:'Marbella, Nueva Andalucía', salary:'10 €/h', industryKey:'industry_hotel', desc:'Sprzątanie i przygotowanie pokoi hotelowych zgodnie ze standardem hotelu. Praca w systemie zmianowym.'})">
           <div>
-            <div style="font-weight:700;margin-bottom:4px;">Camarera de pisos — Hotel Ibis Wrocław</div>
+            <div style="font-weight:700;margin-bottom:4px;">Camarera de pisos — Hotel Playa Marbella</div>
             <div style="color:var(--ink-soft);font-size:13px;" data-i18n="industry_hotel">Hotelarstwo</div>
           </div>
           <span class="badge badge-live" data-i18n="job_status_live">Aktywne</span>
         </div>
-        <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Pomoc kuchenna', company:'Hotel Radisson Blu', location:'Wrocław, Stare Miasto', salary:'25 zł/h', industryKey:'industry_gastro', desc:'Pomoc przy przygotowaniu posiłków oraz utrzymanie porządku w kuchni hotelowej restauracji.'})">
+        <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Pomoc kuchenna', company:'Hotel Sol de Banús', location:'Marbella, Casco Antiguo', salary:'11 €/h', industryKey:'industry_gastro', desc:'Pomoc przy przygotowaniu posiłków oraz utrzymanie porządku w kuchni hotelowej restauracji.'})">
           <div>
-            <div style="font-weight:700;margin-bottom:4px;">Pomoc kuchenna — Hotel Radisson Blu</div>
+            <div style="font-weight:700;margin-bottom:4px;">Pomoc kuchenna — Hotel Sol de Banús</div>
             <div style="color:var(--ink-soft);font-size:13px;" data-i18n="industry_gastro">Gastronomia</div>
           </div>
           <span class="badge badge-live" data-i18n="job_status_live">Aktywne</span>
         </div>
-        <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Magazynier', company:'Centrum Logistyczne Bielany', location:'Bielany Wrocławskie', salary:'27 zł/h', industryKey:'industry_logistics', desc:'Kompletacja i pakowanie zamówień w nowoczesnym centrum logistycznym. Praca na wózku widłowym mile widziana.'})">
+        <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Magazynier', company:'Centro Logístico Guadalhorce', location:'Málaga, Guadalhorce', salary:'12 €/h', industryKey:'industry_logistics', desc:'Kompletacja i pakowanie zamówień w nowoczesnym centrum logistycznym. Praca na wózku widłowym mile widziana.'})">
           <div>
-            <div style="font-weight:700;margin-bottom:4px;">Magazynier — Centrum Logistyczne Bielany</div>
+            <div style="font-weight:700;margin-bottom:4px;">Magazynier — Centro Logístico Guadalhorce</div>
             <div style="color:var(--ink-soft);font-size:13px;" data-i18n="industry_logistics">Magazyn i logistyka</div>
           </div>
           <span class="badge badge-live" data-i18n="job_status_live">Aktywne</span>
@@ -733,16 +734,16 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       <div class="plan-card">
         <h3 data-i18n="plan_starter_name">Starter</h3>
         <p class="plan-desc" data-i18n="plan_starter_desc">Dla fachowców, którzy zaczynają</p>
-        <div class="plan-price" data-i18n="plan_starter_price">29 zł / mies.</div>
-        <div class="plan-lead" data-i18n="plan_starter_lead">Lead od 2 pkt · punkty zawsze kupowane osobno</div>
+        <div class="plan-price" data-i18n="plan_starter_price">7 € / mies.</div>
+        <div class="plan-lead" data-i18n="plan_starter_lead">Leady od 1 pkt · 1 pkt = 1 €</div>
         <button class="btn btn-ghost plan-card-btn" data-i18n="btn_choose_plan_home">Wybierz plan</button>
       </div>
       <div class="plan-card featured">
         <div class="plan-badge" data-i18n="plan_badge_popular">Najczęściej wybierany</div>
         <h3 data-i18n="plan_pro_name">Pro</h3>
         <p class="plan-desc" data-i18n="plan_pro_desc">Dla stałych zleceń i niższych kosztów leadów</p>
-        <div class="plan-price" data-i18n="plan_pro_price">79 zł / mies.</div>
-        <div class="plan-lead" data-i18n="plan_pro_lead">Lead od 1 pkt (2x taniej niż Starter)</div>
+        <div class="plan-price" data-i18n="plan_pro_price">18 € / mies.</div>
+        <div class="plan-lead" data-i18n="plan_pro_lead">+20% punktów gratis przy każdym zakupie</div>
         <ul class="plan-benefits">
           <li data-i18n="plan_pro_benefit_1">Widzisz nowe leady 15 minut wcześniej niż Starter</li>
           <li data-i18n="plan_pro_benefit_2">Zwrot punktów już po 24h braku odpowiedzi (Starter: 48h)</li>
@@ -754,8 +755,8 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <div class="plan-badge plan-badge-premium" data-i18n="plan_badge_premium">Premium</div>
         <h3 data-i18n="plan_promax_name">Pro Max</h3>
         <p class="plan-desc" data-i18n="plan_promax_desc">Dla fachowców, którzy chcą być pierwsi</p>
-        <div class="plan-price" data-i18n="plan_promax_price">149 zł / mies.</div>
-        <div class="plan-lead" data-i18n="plan_promax_lead">Lead od 1 pkt · najniższy koszt na rynku</div>
+        <div class="plan-price" data-i18n="plan_promax_price">35 € / mies.</div>
+        <div class="plan-lead" data-i18n="plan_promax_lead">+40% punktów gratis przy każdym zakupie</div>
         <ul class="plan-benefits">
           <li data-i18n="plan_promax_benefit_1">Leady 30 minut wcześniej niż Starter</li>
           <li data-i18n="plan_promax_benefit_2">Priorytetowa obsługa zgłoszeń wsparcia</li>
@@ -794,21 +795,21 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       <div class="employer-view active" data-employerview-panel="publish">
       <div class="list-title" style="margin-top:0;" data-i18n="jobs_pricing_title">Wybierz sposób publikacji</div>
       <div class="job-plan-grid">
-        <button class="job-plan-card selected" data-plan="single" data-price="99 zł" onclick="selectJobPlan('single')">
+        <button class="job-plan-card selected" data-plan="single" data-price="25 €" onclick="selectJobPlan('single')">
           <h3 data-i18n="jobs_plan_single_name">Pojedyncze ogłoszenie</h3>
           <p class="job-plan-desc" data-i18n="jobs_plan_single_desc">30 dni widoczności, bez limitu zgłoszeń</p>
-          <div class="job-plan-price">99 zł</div>
+          <div class="job-plan-price">25 €</div>
         </button>
-        <button class="job-plan-card" data-plan="sub" data-price="249 zł/mies." onclick="selectJobPlan('sub')">
+        <button class="job-plan-card" data-plan="sub" data-price="59 €/mies." onclick="selectJobPlan('sub')">
           <h3 data-i18n="jobs_plan_sub_name">Abonament</h3>
           <p class="job-plan-desc" data-i18n="jobs_plan_sub_desc">Nielimitowane ogłoszenia + wyróżnienie</p>
-          <div class="job-plan-price">249 zł<span style="font-size:13px;font-weight:600;">/mies.</span></div>
+          <div class="job-plan-price">59 €<span style="font-size:13px;font-weight:600;">/mies.</span></div>
         </button>
       </div>
 
       <div class="login-form" style="max-width:560px;margin-top:0;">
         <label data-i18n="form_company">Nazwa firmy / hotelu</label>
-        <input type="text" id="jobCompany" placeholder="np. Hotel Wrocław Centrum">
+        <input type="text" id="jobCompany" placeholder="np. Hotel Marbella Centro">
         <label data-i18n="form_industry">Branża</label>
         <select id="jobIndustry" style="width:100%;border:1px solid var(--border);border-radius:8px;padding:11px 12px;font-size:14px;font-family:inherit;background:var(--paper);color:var(--ink);">
           <option data-i18n="industry_hotel">Hotelarstwo</option>
@@ -821,9 +822,9 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <label data-i18n="form_job_title">Stanowisko</label>
         <input type="text" id="jobTitle" placeholder="np. Sprzątaczka / Camarera de pisos">
         <label data-i18n="form_job_location">Lokalizacja</label>
-        <input type="text" id="jobLocation" placeholder="np. Wrocław, Stare Miasto">
+        <input type="text" id="jobLocation" placeholder="np. Marbella, Casco Antiguo">
         <label data-i18n="form_salary">Wynagrodzenie</label>
-        <input type="text" id="jobSalary" placeholder="np. 24 zł/h">
+        <input type="text" id="jobSalary" placeholder="np. 11 €/h">
         <label data-i18n="form_job_desc">Opis oferty</label>
         <textarea id="jobDesc" rows="4" style="width:100%;border:1px solid var(--border);border-radius:8px;padding:11px 12px;font-size:14px;font-family:inherit;background:var(--paper);color:var(--ink);" placeholder="Zakres obowiązków, wymiar godzin, wymagania..."></textarea>
 
@@ -839,8 +840,8 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
           </button>
         </div>
 
-        <button class="btn btn-primary" id="publishJobBtn" style="width:100%;margin-top:8px;" data-price="99 zł">
-          <span data-i18n="btn_publish_job">Opublikuj ogłoszenie</span> — <span id="publishJobPrice">99 zł</span>
+        <button class="btn btn-primary" id="publishJobBtn" style="width:100%;margin-top:8px;" data-price="25 €">
+          <span data-i18n="btn_publish_job">Opublikuj ogłoszenie</span> — <span id="publishJobPrice">25 €</span>
         </button>
         <p class="form-footnote" style="text-align:left;" data-i18n="jobs_payment_note">Płatność kartą, 30 dni widoczności od publikacji. Rachunek wysyłamy automatycznie na e-mail firmy.</p>
       </div>
@@ -890,24 +891,24 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
 
     <div class="list-title" data-i18n="jobs_list_title">Aktualne oferty pracy</div>
     <div id="jobsListContainer">
-      <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Camarera de pisos', company:'Hotel Ibis Wrocław', location:'Wrocław, Krzyki', salary:'23 zł/h', industryKey:'industry_hotel', desc:'Sprzątanie i przygotowanie pokoi hotelowych zgodnie ze standardem hotelu. Praca w systemie zmianowym.'})">
+      <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Camarera de pisos', company:'Hotel Playa Marbella', location:'Marbella, Nueva Andalucía', salary:'10 €/h', industryKey:'industry_hotel', desc:'Sprzątanie i przygotowanie pokoi hotelowych zgodnie ze standardem hotelu. Praca w systemie zmianowym.'})">
         <div>
-          <div style="font-weight:700;margin-bottom:4px;">Camarera de pisos — Hotel Ibis Wrocław</div>
-          <div style="color:var(--ink-soft);font-size:13px;">Wrocław, Krzyki · 23 zł/h · dodano 2 dni temu</div>
+          <div style="font-weight:700;margin-bottom:4px;">Camarera de pisos — Hotel Playa Marbella</div>
+          <div style="color:var(--ink-soft);font-size:13px;">Marbella, Nueva Andalucía · 10 €/h · dodano 2 dni temu</div>
         </div>
         <div style="text-align:right;">
           <span class="badge badge-live" data-i18n="job_status_live" style="display:block;margin-bottom:8px;">Aktywne</span>
-          <button class="btn btn-primary btn-sm apply-job-btn" data-job="Camarera de pisos" data-company="Hotel Ibis Wrocław" data-i18n="btn_apply" onclick="event.stopPropagation()">Aplikuj</button>
+          <button class="btn btn-primary btn-sm apply-job-btn" data-job="Camarera de pisos" data-company="Hotel Playa Marbella" data-i18n="btn_apply" onclick="event.stopPropagation()">Aplikuj</button>
         </div>
       </div>
-      <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Pomoc kuchenna', company:'Hotel Radisson Blu', location:'Wrocław, Stare Miasto', salary:'25 zł/h', industryKey:'industry_gastro', desc:'Pomoc przy przygotowaniu posiłków oraz utrzymanie porządku w kuchni hotelowej restauracji.'})">
+      <div class="card job-listing" style="cursor:pointer;" onclick="openJobDetail({title:'Pomoc kuchenna', company:'Hotel Sol de Banús', location:'Marbella, Casco Antiguo', salary:'11 €/h', industryKey:'industry_gastro', desc:'Pomoc przy przygotowaniu posiłków oraz utrzymanie porządku w kuchni hotelowej restauracji.'})">
         <div>
-          <div style="font-weight:700;margin-bottom:4px;">Pomoc kuchenna — Hotel Radisson Blu</div>
-          <div style="color:var(--ink-soft);font-size:13px;">Wrocław, Stare Miasto · 25 zł/h · dodano 5 dni temu</div>
+          <div style="font-weight:700;margin-bottom:4px;">Pomoc kuchenna — Hotel Sol de Banús</div>
+          <div style="color:var(--ink-soft);font-size:13px;">Marbella, Casco Antiguo · 11 €/h · dodano 5 dni temu</div>
         </div>
         <div style="text-align:right;">
           <span class="badge badge-live" data-i18n="job_status_live" style="display:block;margin-bottom:8px;">Aktywne</span>
-          <button class="btn btn-primary btn-sm apply-job-btn" data-job="Pomoc kuchenna" data-company="Hotel Radisson Blu" data-i18n="btn_apply" onclick="event.stopPropagation()">Aplikuj</button>
+          <button class="btn btn-primary btn-sm apply-job-btn" data-job="Pomoc kuchenna" data-company="Hotel Sol de Banús" data-i18n="btn_apply" onclick="event.stopPropagation()">Aplikuj</button>
         </div>
       </div>
     </div>
@@ -955,7 +956,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
 
     <div class="login-form" style="max-width:420px;margin:0 0 20px;">
       <label data-i18n="form_location">Lokalizacja</label>
-      <input type="text" id="jobSearchLocation" value="Wrocław" placeholder="np. Wrocław">
+      <input type="text" id="jobSearchLocation" value="Marbella" placeholder="np. Marbella">
 
       <label data-i18n="jobs_search_query_label">Czego szukasz?</label>
       <div style="position:relative;">
@@ -1133,26 +1134,26 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       </button>
     </div>
 
-    <div class="points-pkg" data-price="20" data-points="30">
+    <div class="points-pkg" data-price="20" data-points="20">
       <div>
-        <div style="font-weight:700;">30 <span data-i18n="pts_label">pkt</span></div>
-        <div style="color:var(--ink-soft);font-size:12.5px;">20 zł</div>
+        <div style="font-weight:700;">20 <span data-i18n="pts_label">pkt</span></div>
+        <div style="color:var(--ink-soft);font-size:12.5px;">20 €</div>
       </div>
-      <button class="btn btn-ghost btn-sm buy-pkg-btn" data-price="20" data-points="30" data-i18n="btn_buy">Kup</button>
+      <button class="btn btn-ghost btn-sm buy-pkg-btn" data-price="20" data-points="20" data-i18n="btn_buy">Kup</button>
     </div>
-    <div class="points-pkg" data-price="35" data-points="60">
+    <div class="points-pkg" data-price="50" data-points="55">
       <div>
-        <div style="font-weight:700;">60 <span data-i18n="pts_label">pkt</span> <span class="badge" style="background:var(--amber-tint);color:var(--amber-deep);">+10%</span></div>
-        <div style="color:var(--ink-soft);font-size:12.5px;">35 zł</div>
+        <div style="font-weight:700;">55 <span data-i18n="pts_label">pkt</span> <span class="badge" style="background:var(--amber-tint);color:var(--amber-deep);">+10%</span></div>
+        <div style="color:var(--ink-soft);font-size:12.5px;">50 €</div>
       </div>
-      <button class="btn btn-ghost btn-sm buy-pkg-btn" data-price="35" data-points="60" data-i18n="btn_buy">Kup</button>
+      <button class="btn btn-ghost btn-sm buy-pkg-btn" data-price="50" data-points="55" data-i18n="btn_buy">Kup</button>
     </div>
-    <div class="points-pkg" data-price="60" data-points="110">
+    <div class="points-pkg" data-price="100" data-points="115">
       <div>
-        <div style="font-weight:700;">110 <span data-i18n="pts_label">pkt</span> <span class="badge" style="background:var(--amber-tint);color:var(--amber-deep);">+15%</span></div>
-        <div style="color:var(--ink-soft);font-size:12.5px;">60 zł</div>
+        <div style="font-weight:700;">115 <span data-i18n="pts_label">pkt</span> <span class="badge" style="background:var(--amber-tint);color:var(--amber-deep);">+15%</span></div>
+        <div style="color:var(--ink-soft);font-size:12.5px;">100 €</div>
       </div>
-      <button class="btn btn-amber btn-sm buy-pkg-btn" data-price="60" data-points="110" data-i18n="btn_buy">Kup</button>
+      <button class="btn btn-amber btn-sm buy-pkg-btn" data-price="100" data-points="115" data-i18n="btn_buy">Kup</button>
     </div>
 
     <p id="pointsPurchaseConfirm" style="display:none;color:var(--good);font-size:13px;font-weight:600;margin:0 0 14px;"></p>
@@ -1231,7 +1232,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <p style="color:var(--ink-soft);font-size:12px;margin:0 0 8px;" data-i18n="pro_specializations_sub">Wybierz kategorie, w których przyjmujesz leady.</p>
         <div class="chip-select" id="proRegSpecializations"></div>
         <label data-i18n="pro_main_location_label">Lokalizacja główna</label>
-        <input type="text" placeholder="np. Wrocław, Krzyki">
+        <input type="text" placeholder="np. Marbella, Nueva Andalucía">
       </div>
       <label data-i18n="form_email">Adres e-mail</label>
       <input type="email" placeholder="marek@przyklad.pl">
@@ -1253,7 +1254,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       <p style="color:var(--ink-soft);font-size:13px;margin:-6px 0 16px;" id="employerFormSub" data-i18n="employer_register_sub">Zarejestruj firmę, żeby publikować oferty pracy.</p>
       <div class="register-only-field" id="employerCompanyFields">
         <label data-i18n="form_company">Nazwa firmy / hotelu</label>
-        <input type="text" placeholder="np. Hotel Wrocław Centrum">
+        <input type="text" placeholder="np. Hotel Marbella Centro">
         <label data-i18n="form_industry">Branża</label>
         <select style="width:100%;border:1px solid var(--border);border-radius:8px;padding:11px 12px;font-size:14px;font-family:inherit;background:var(--paper);color:var(--ink);">
           <option data-i18n="industry_hotel">Hotelarstwo</option>
@@ -1334,7 +1335,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       <div class="card" style="cursor:pointer;" onclick="goClientView('order')">
         <div class="card-row">
           <div>
-            <div style="font-weight:700;margin-bottom:4px;">Wymiana baterii i naprawa syfonu — Wrocław</div>
+            <div style="font-weight:700;margin-bottom:4px;">Wymiana baterii i naprawa syfonu — Marbella</div>
             <div style="color:var(--ink-soft);font-size:13px;">Hydraulika · dodano 3 dni temu · 4 <span data-i18n="client_offers_label">ofert</span></div>
           </div>
           <span class="badge badge-new" data-i18n="status_new">Nowe</span>
@@ -1396,7 +1397,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <div class="login-form" style="max-width:560px;">
           <label data-i18n="form_description">Opis zlecenia</label>
           <textarea id="reqDescription" rows="5" style="width:100%;border:1px solid var(--border);border-radius:8px;padding:11px 12px;font-size:14px;font-family:inherit;background:var(--paper);color:var(--ink);" placeholder="Opisz, co trzeba zrobić..."></textarea>
-          <label data-i18n="form_budget">Budżet (zł)</label>
+          <label data-i18n="form_budget">Budżet (€)</label>
           <div style="display:flex;gap:10px;">
             <input id="reqBudgetFrom" type="number" placeholder="od">
             <input id="reqBudgetTo" type="number" placeholder="do">
@@ -1407,7 +1408,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       <div class="step-panel" data-step-panel="3">
         <div class="login-form" style="max-width:560px;">
           <label data-i18n="form_location">Lokalizacja</label>
-          <input id="reqLocation" type="text" placeholder="np. Wrocław, Krzyki">
+          <input id="reqLocation" type="text" placeholder="np. Marbella, Nueva Andalucía">
           <label data-i18n="form_date">Preferowany termin</label>
           <input id="reqDate" type="date">
         </div>
@@ -1416,7 +1417,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
       <div class="step-panel" data-step-panel="4">
         <div class="card" style="max-width:560px;" id="reqSummaryBox">
           <div style="font-weight:700;margin-bottom:6px;" id="reqSummaryCat">Hydraulika</div>
-          <div style="color:var(--ink-soft);font-size:13.5px;" id="reqSummaryLine">Wrocław, Krzyki · 150–300 zł · w tym tygodniu</div>
+          <div style="color:var(--ink-soft);font-size:13.5px;" id="reqSummaryLine">Marbella, Nueva Andalucía · 80–150 € · w tym tygodniu</div>
         </div>
       </div>
 
@@ -1490,7 +1491,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <label data-i18n="form_phone">Telefon</label>
         <input type="tel" value="+48 600 000 000">
         <label data-i18n="form_address">Adres</label>
-        <input type="text" value="ul. Przykładowa 12, Wrocław">
+        <input type="text" value="Calle Ejemplo 12, Marbella">
         <label data-i18n="form_new_password">Nowe hasło</label>
         <input type="password" placeholder="••••••••">
       </div>
@@ -1524,79 +1525,79 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
 
       <div class="card lead-item" data-lead-id="1" data-category="cat_electric" data-desc="Przestały działać dwa gniazdka w salonie, prawdopodobnie problem z obwodem. Proszę o wycenę wizyty diagnostycznej." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Naprawa instalacji elektrycznej — Wrocław, Krzyki</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 2 godz. temu</div><div class="lead-slots">1/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 150–250 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Naprawa instalacji elektrycznej — Marbella, Nueva Andalucía</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 2 godz. temu</div><div class="lead-slots">1/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 150–250 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 2 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="2" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="2" data-category="cat_electric" data-desc="Potrzebuję zamontować 4 nowe gniazdka oraz oprawę oświetleniową w nowo urządzanym pokoju." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Montaż gniazdek i oświetlenia — Wrocław, Fabryczna</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano wczoraj</div><div class="lead-slots">2/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Montaż gniazdek i oświetlenia — San Pedro Alcántara</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano wczoraj</div><div class="lead-slots">2/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 2 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="2" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="3" data-category="cat_electric" data-desc="Wybił bezpiecznik i nie da się go włączyć z powrotem. Sprawa raczej pilna, dzieci w domu." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Wymiana bezpiecznika w mieszkaniu — Wrocław, Psie Pole</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 3 godz. temu</div><div class="lead-slots">0/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 100–180 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Wymiana bezpiecznika w mieszkaniu — Estepona</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 3 godz. temu</div><div class="lead-slots">0/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 100–180 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 1 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="1" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="4" data-category="cat_electric" data-desc="Kupiłem nową płytę indukcyjną, potrzebuję podłączenia zgodnie z przepisami i sprawdzenia instalacji." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Podłączenie płyty indukcyjnej — Wrocław, Krzyki</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 4 godz. temu</div><div class="lead-slots">3/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 200–300 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Podłączenie płyty indukcyjnej — Marbella, Nueva Andalucía</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 4 godz. temu</div><div class="lead-slots">3/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 200–300 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 2 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="2" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="5" data-category="cat_electric" data-desc="Nie świeci się światło na klatce schodowej od wczoraj wieczorem. Proszę o szybką interwencję." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Awaria oświetlenia na klatce — Wrocław, Stare Miasto</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka (pogotowie) · dodano 5 godz. temu</div><div class="lead-slots">2/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Awaria oświetlenia na klatce — Marbella, Casco Antiguo</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka (pogotowie) · dodano 5 godz. temu</div><div class="lead-slots">2/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 2 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="2" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="6" data-category="cat_electric" data-desc="Budowa garażu, potrzebna nowa rozdzielnica elektryczna wraz z zabezpieczeniami." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Montaż rozdzielnicy w garażu — Kobierzyce</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano wczoraj</div><div class="lead-slots">1/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 300–400 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Montaż rozdzielnicy w garażu — Benahavís</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano wczoraj</div><div class="lead-slots">1/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 300–400 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 3 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="3" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="7" data-category="cat_electric" data-desc="Odbiór mieszkania po remoncie — proszę o sprawdzenie zgodności instalacji z normami przed podpisaniem protokołu." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Sprawdzenie instalacji przed odbiorem — Bielany Wrocławskie</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano wczoraj</div><div class="lead-slots">0/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Sprawdzenie instalacji przed odbiorem — Málaga, Guadalhorce</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano wczoraj</div><div class="lead-slots">0/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 2 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="2" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="8" data-category="cat_electric" data-desc="Kupiłem samochód elektryczny, chciałbym zamontować wallbox w garażu podziemnym." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Instalacja ładowarki do samochodu elektrycznego — Wrocław, Fabryczna</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 2 dni temu</div><div class="lead-slots">4/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 400–500 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Instalacja ładowarki do samochodu elektrycznego — San Pedro Alcántara</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 2 dni temu</div><div class="lead-slots">4/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 400–500 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 4 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="4" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="9" data-category="cat_electric" data-desc="Po wczorajszej burzy padło kilka urządzeń w domu, podejrzewam przepięcie. Proszę o pilny kontakt." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Naprawa przepięcia po burzy — Wrocław, Krzyki</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka (pogotowie) · dodano 2 dni temu</div><div class="lead-slots">3/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Naprawa przepięcia po burzy — Marbella, Nueva Andalucía</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka (pogotowie) · dodano 2 dni temu</div><div class="lead-slots">3/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 250–350 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 2 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="2" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="10" data-category="cat_electric" data-desc="Stara instalacja z lat 80. w kamienicy, planujemy kompleksową wymianę na nową, zgodną z obecnymi normami." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Wymiana starej instalacji w kamienicy — Wrocław, Stare Miasto</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 3 dni temu</div><div class="lead-slots">2/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 450–600 zł --></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Wymiana starej instalacji w kamienicy — Marbella, Casco Antiguo</div><div style="color:var(--ink-soft);font-size:13px;">Elektryka · dodano 3 dni temu</div><div class="lead-slots">2/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div><!-- szacowana wartość zlecenia (do wyliczeń, niewidoczna dla fachowca): 450–600 € --></div>
           <div style="text-align:right;"><div class="price-tag">− 5 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="5" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="11" data-category="cat_garden" data-desc="Przycięcie żywopłotu i koszenie trawnika przed ogrodem, powierzchnia ok. 300 m²." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Przycinanie żywopłotu i koszenie trawnika — Wrocław, Krzyki</div><div style="color:var(--ink-soft);font-size:13px;">Ogród · dodano wczoraj</div><div class="lead-slots">1/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Przycinanie żywopłotu i koszenie trawnika — Marbella, Nueva Andalucía</div><div style="color:var(--ink-soft);font-size:13px;">Ogród · dodano wczoraj</div><div class="lead-slots">1/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div></div>
           <div style="text-align:right;"><div class="price-tag">− 2 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="2" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="12" data-category="cat_paint" data-desc="Malowanie sypialni i pokoju dziecięcego na jasne kolory, powierzchnia ok. 30 m²." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Malowanie dwóch pokoi — Wrocław, Fabryczna</div><div style="color:var(--ink-soft);font-size:13px;">Malowanie · dodano 2 dni temu</div><div class="lead-slots">0/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Malowanie dwóch pokoi — San Pedro Alcántara</div><div style="color:var(--ink-soft);font-size:13px;">Malowanie · dodano 2 dni temu</div><div class="lead-slots">0/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div></div>
           <div style="text-align:right;"><div class="price-tag">− 3 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="3" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
       <div class="card lead-item" data-lead-id="13" data-category="cat_tiles" data-desc="Ułożenie płytek w łazience, ok. 15 m² ścian i podłogi." style="cursor:pointer;" onclick="if(!event.target.closest('.take-lead-btn')) openLeadDetail(this);">
         <div class="card-row">
-          <div><div style="font-weight:700;margin-bottom:4px;">Płytki w łazience — Wrocław, Psie Pole</div><div style="color:var(--ink-soft);font-size:13px;">Płytki i glazura · dodano 4 dni temu</div><div class="lead-slots">3/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div></div>
+          <div><div style="font-weight:700;margin-bottom:4px;">Płytki w łazience — Estepona</div><div style="color:var(--ink-soft);font-size:13px;">Płytki i glazura · dodano 4 dni temu</div><div class="lead-slots">3/5 <span data-i18n="lead_slots_label">fachowców odpowiedziało</span></div></div>
           <div style="text-align:right;"><div class="price-tag">− 6 <span data-i18n="pts_label">pkt</span></div><button class="btn btn-amber btn-sm take-lead-btn" style="margin-top:8px;" data-cost="6" data-i18n="btn_take_lead">Odbierz lead</button></div>
         </div>
       </div>
@@ -1642,7 +1643,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
 
       <div class="sub-card">
         <h3 data-i18n="pro_sub_status_title">Twój abonament</h3>
-        <div class="row"><span id="subPlanName" data-i18n="pro_sub_plan">Plan Pro</span><b id="subPlanPrice">79 zł / mies.</b></div>
+        <div class="row"><span id="subPlanName" data-i18n="pro_sub_plan">Plan Pro</span><b id="subPlanPrice">18 € / mies.</b></div>
         <div class="row"><span data-i18n="pro_sub_renew">Odnowienie: 1 września 2026</span></div>
         <div class="row"><span data-i18n="pro_sub_used">Wykorzystane leady w tym miesiącu: 14</span></div>
         <div class="progress-bar"><div class="progress-fill" style="width:56%;"></div></div>
@@ -1661,16 +1662,16 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <div class="plan-card" id="planCardStarter">
           <h3 data-i18n="plan_starter_name">Starter</h3>
           <p class="plan-desc" data-i18n="plan_starter_desc">Dla fachowców, którzy zaczynają</p>
-          <div class="plan-price" data-i18n="plan_starter_price">29 zł / mies.</div>
-          <div class="plan-lead" data-i18n="plan_starter_lead">20 zł = 30 punktów · lead od 6 pkt</div>
+          <div class="plan-price" data-i18n="plan_starter_price">7 € / mies.</div>
+          <div class="plan-lead" data-i18n="plan_starter_lead">Leady od 1 pkt · 1 pkt = 1 €</div>
           <button class="btn btn-ghost plan-switch-btn" style="width:100%;" data-plan="starter" data-switch-label="btn_switch_starter" data-i18n="btn_switch_starter">Przejdź na Starter</button>
         </div>
         <div class="plan-card featured" id="planCardPro">
           <div class="plan-badge" data-default-badge="plan_badge_popular" data-i18n="plan_badge_current">Twój obecny plan</div>
           <h3 data-i18n="plan_pro_name">Pro</h3>
           <p class="plan-desc" data-i18n="plan_pro_desc">Dla stałych zleceń i niższych kosztów leadów</p>
-          <div class="plan-price" data-i18n="plan_pro_price">79 zł / mies.</div>
-          <div class="plan-lead" data-i18n="plan_pro_lead">20 zł = 40 punktów · lead od 1 pkt</div>
+          <div class="plan-price" data-i18n="plan_pro_price">18 € / mies.</div>
+          <div class="plan-lead" data-i18n="plan_pro_lead">+20% punktów gratis przy każdym zakupie</div>
           <ul class="plan-benefits">
             <li data-i18n="plan_pro_benefit_1">Widzisz nowe leady 15 minut wcześniej niż Starter</li>
             <li data-i18n="plan_pro_benefit_2">Zwrot punktów już po 24h braku odpowiedzi (Starter: 48h)</li>
@@ -1682,8 +1683,8 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
           <div class="plan-badge plan-badge-premium" data-default-badge="plan_badge_premium" data-i18n="plan_badge_premium">Premium</div>
           <h3 data-i18n="plan_promax_name">Pro Max</h3>
           <p class="plan-desc" data-i18n="plan_promax_desc">Dla fachowców, którzy chcą być pierwsi</p>
-          <div class="plan-price" data-i18n="plan_promax_price">149 zł / mies.</div>
-          <div class="plan-lead" data-i18n="plan_promax_lead">20 zł = 50 punktów · lead od 1 pkt</div>
+          <div class="plan-price" data-i18n="plan_promax_price">35 € / mies.</div>
+          <div class="plan-lead" data-i18n="plan_promax_lead">+40% punktów gratis przy każdym zakupie</div>
           <ul class="plan-benefits">
             <li data-i18n="plan_promax_benefit_1">Leady 30 minut wcześniej niż Starter</li>
             <li data-i18n="plan_promax_benefit_2">Dedykowany opiekun konta</li>
@@ -1712,7 +1713,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
             <span class="badge verified-badge" data-i18n="pro_verified_badge">✓ Zweryfikowany</span>
           </div>
           <div class="stars" data-rating="4.7" data-count="34" style="margin:4px 0;"></div>
-          <div style="color:var(--ink-soft);font-size:12.5px;" data-i18n="pro_profile_subline">Elektryk · Wrocław i okolice · w VeloApp od marca 2026</div>
+          <div style="color:var(--ink-soft);font-size:12.5px;" data-i18n="pro_profile_subline">Elektryk · Marbella i okolice · w VeloApp od marca 2026</div>
         </div>
       </div>
 
@@ -1740,7 +1741,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
 
         <label style="margin-top:16px;" data-i18n="pro_main_location_label">Lokalizacja główna</label>
         <div style="display:flex;gap:10px;">
-          <input type="text" id="proMainLocation" value="Wrocław, Krzyki" style="flex:1;">
+          <input type="text" id="proMainLocation" value="Marbella, Nueva Andalucía" style="flex:1;">
           <button type="button" class="btn btn-ghost btn-sm" id="showLocationMapBtn" style="flex:none;">
             <svg viewBox="0 0 24 24" width="16" height="16" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-inline-end:4px;vertical-align:-3px;"><path d="M12 2c4 5 7 9 7 13a7 7 0 1 1-14 0c0-4 3-8 7-13Z"/><circle cx="12" cy="12" r="2.3"/></svg>
             <span data-i18n="pro_show_on_map">Pokaż na mapie</span>
@@ -1780,7 +1781,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <div id="certList">
           <div class="cert-item">
             <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6Z"/><path d="M9 12l2 2 4-4"/></svg>
-            <span data-i18n="pro_cert_example">Uprawnienia SEP do 1 kV</span>
+            <span data-i18n="pro_cert_example">Instalador autorizado en Baja Tensión (REBT)</span>
             <span class="badge badge-live" data-i18n="pro_cert_verified" style="margin-inline-start:auto;">Zweryfikowane</span>
           </div>
         </div>
@@ -1853,7 +1854,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
     <div class="stat-row">
       <div class="stat-card"><div class="stat-num">1 284</div><div class="stat-label" data-i18n="admin_stat_users">Klienci</div></div>
       <div class="stat-card"><div class="stat-num">312</div><div class="stat-label" data-i18n="admin_stat_pros">Fachowcy</div></div>
-      <div class="stat-card"><div class="stat-num">18 940 zł</div><div class="stat-label" data-i18n="admin_stat_revenue">Przychód (bieżący miesiąc)</div></div>
+      <div class="stat-card"><div class="stat-num">4 520 €</div><div class="stat-label" data-i18n="admin_stat_revenue">Przychód (bieżący miesiąc)</div></div>
       <div class="stat-card"><div class="stat-num">462</div><div class="stat-label" data-i18n="admin_stat_orders">Zlecenia w tym miesiącu</div></div>
     </div>
 
@@ -1865,7 +1866,7 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
             <thead><tr><th>Fachowiec</th><th>Kategoria</th><th>Miasto</th><th></th></tr></thead>
             <tbody>
               <tr>
-                <td>Piotr Zieliński</td><td>Hydraulika</td><td>Wrocław</td>
+                <td>Piotr Zieliński</td><td>Hydraulika</td><td>Marbella</td>
                 <td style="display:flex;gap:8px;">
                   <button class="btn btn-primary btn-sm" data-i18n="btn_approve">Zatwierdź</button>
                   <button class="btn btn-danger-outline btn-sm" data-i18n="btn_reject">Odrzuć</button>
@@ -1916,11 +1917,11 @@ table.admin-table td{padding:12px;border-bottom:1px solid var(--border);vertical
         <div class="card">
           <div class="revenue-bars">
             <div class="revenue-bar-row">
-              <div class="label"><span data-i18n="admin_revenue_subs">Abonamenty</span><b>11 200 zł</b></div>
+              <div class="label"><span data-i18n="admin_revenue_subs">Abonamenty</span><b>2 680 €</b></div>
               <div class="revenue-track"><div class="revenue-fill alt" style="width:59%;"></div></div>
             </div>
             <div class="revenue-bar-row">
-              <div class="label"><span data-i18n="admin_revenue_leads">Płatności za leady</span><b>7 740 zł</b></div>
+              <div class="label"><span data-i18n="admin_revenue_leads">Płatności za leady</span><b>1 840 €</b></div>
               <div class="revenue-track"><div class="revenue-fill" style="width:41%;"></div></div>
             </div>
           </div>
@@ -2093,20 +2094,22 @@ document.getElementById('saveSpecializationsBtn').addEventListener('click', ()=>
   document.getElementById('editSpecializationsBtn').style.display = '';
 });
 
-const wroclawDistricts = {
-  'krzyki': [51.0630, 17.0180],
-  'fabryczna': [51.1120, 16.9500],
-  'psie pole': [51.1370, 17.0700],
-  'stare miasto': [51.1120, 17.0320],
-  'śródmieście': [51.1050, 17.0450],
-  'sroddmiescie': [51.1050, 17.0450]
+const areaCoords = {
+  'nueva andalucía': [36.4935, -4.9590],
+  'puerto banús': [36.4870, -4.9530],
+  'casco antiguo': [36.5100, -4.8850],
+  'san pedro': [36.4865, -4.9900],
+  'estepona': [36.4270, -5.1460],
+  'benahavís': [36.5230, -5.0460],
+  'guadalhorce': [36.6900, -4.4700],
+  'málaga': [36.7213, -4.4214]
 };
 function guessCoords(address){
   const lower = address.toLowerCase();
-  for(const key in wroclawDistricts){
-    if(lower.includes(key)) return wroclawDistricts[key];
+  for(const key in areaCoords){
+    if(lower.includes(key)) return areaCoords[key];
   }
-  return [51.1079, 17.0385]; // centrum Wrocławia (domyślnie)
+  return [36.5101, -4.8825]; // centrum Marbelli (domyślnie)
 }
 
 document.getElementById('changeAvatarBtn').addEventListener('click', ()=>{
@@ -2124,7 +2127,7 @@ document.getElementById('avatarFileInput').addEventListener('change', function()
 });
 
 document.getElementById('showLocationMapBtn').addEventListener('click', ()=>{
-  const address = document.getElementById('proMainLocation').value.trim() || 'Wrocław';
+  const address = document.getElementById('proMainLocation').value.trim() || 'Marbella';
   document.getElementById('locationMapAddress').textContent = address;
   const [lat, lon] = guessCoords(address);
   const d = 0.03;
@@ -2275,11 +2278,13 @@ document.getElementById('confirmPlanPurchaseBtn').addEventListener('click', ()=>
 });
 document.querySelectorAll('.buy-pkg-btn').forEach(btn=>{
   btn.addEventListener('click', ()=>{
-    pointsBalance += parseInt(btn.dataset.points, 10);
+    const PLAN_POINTS_BONUS = { starter:0, pro:0.2, promax:0.4 }; // Pro +20%, Pro Max +40% punktów
+    const addedPoints = Math.round(parseInt(btn.dataset.points, 10) * (1 + (PLAN_POINTS_BONUS[proActivePlan] || 0)));
+    pointsBalance += addedPoints;
     renderPoints();
     const methodLabel = selectedPointsPayMethod === 'bizum' ? 'Bizum' : dict[currentLang].pay_method_card;
     const confirmEl = document.getElementById('pointsPurchaseConfirm');
-    confirmEl.textContent = `✓ +${btn.dataset.points} ${dict[currentLang].pts_label} · ${methodLabel}`;
+    confirmEl.textContent = `✓ +${addedPoints} ${dict[currentLang].pts_label} · ${methodLabel}`;
     confirmEl.style.display = 'block';
     setTimeout(()=>{
       document.getElementById('buyPointsModal').classList.add('hidden');
@@ -2290,8 +2295,8 @@ document.querySelectorAll('.buy-pkg-btn').forEach(btn=>{
 
 const leadClientNames = {
   '1':'Ewa Kowalska', '2':'Piotr Zieliński', '3':'Anna Malinowska', '4':'Tomasz Wysocki',
-  '5':'Wspólnota Mieszkaniowa', '6':'Michał Górski', '7':'Deweloper Bielany', '8':'Karolina Nowak',
-  '9':'Robert Adamczyk', '10':'Wspólnota Stare Miasto'
+  '5':'Wspólnota Mieszkaniowa', '6':'Michał Górski', '7':'Promotora Costa del Sol', '8':'Karolina Nowak',
+  '9':'Robert Adamczyk', '10':'Comunidad Casco Antiguo'
 };
 const proChatThreads = {};
 
@@ -2394,8 +2399,8 @@ function takeLead(leadCard){
 
   /* ---- Odblokuj rozmowę z klientem po odebraniu leada ---- */
   const clientName = leadClientNames[leadId] || dict[currentLang].pro_default_client;
-  proChatThreads[leadId] = { name: clientName, messages: [
-    {who:'received', text: dict[currentLang].pro_default_opening_msg}
+  proChatThreads[leadId] = { name: clientName, simulateClientReply: true, messages: [
+    {who:'sent', text: dict[currentLang].pro_default_opening_msg}
   ]};
   document.getElementById('proNoMessagesMsg').style.display = 'none';
   document.getElementById('proMessagesLayout').style.display = '';
@@ -2565,7 +2570,7 @@ function selectJobPlan(plan){
 document.getElementById('publishJobBtn').addEventListener('click', ()=>{
   const company = document.getElementById('jobCompany').value.trim() || 'Twoja firma';
   const title = document.getElementById('jobTitle').value.trim() || 'Nowe stanowisko';
-  const location = document.getElementById('jobLocation').value.trim() || 'Wrocław';
+  const location = document.getElementById('jobLocation').value.trim() || 'Marbella';
   const salary = document.getElementById('jobSalary').value.trim();
 
   const card = document.createElement('div');
@@ -2794,9 +2799,9 @@ function updateSummary(){
   const catName = selectedNewReqCatKey ? dict[currentLang][selectedNewReqCatKey] : dict[currentLang].new_req_cat_unselected;
   const from = document.getElementById('reqBudgetFrom').value;
   const to = document.getElementById('reqBudgetTo').value;
-  const loc = document.getElementById('reqLocation').value.trim() || 'Wrocław';
+  const loc = document.getElementById('reqLocation').value.trim() || 'Marbella';
   const date = document.getElementById('reqDate').value;
-  const budgetStr = (from || to) ? `${from || '?'}–${to || '?'} zł` : '150–300 zł';
+  const budgetStr = (from || to) ? `${from || '?'}–${to || '?'} €` : '80–150 €';
   document.getElementById('reqSummaryCat').textContent = catName;
   document.getElementById('reqSummaryLine').textContent = `${loc} · ${budgetStr} · ${date || 'w tym tygodniu'}`;
   return { catName, desc, loc, budgetStr, date };
@@ -2879,7 +2884,7 @@ const chatThreads = {
     {who:'received', text:'Dobra, będę jutro o 15:00.'}
   ]},
   2: { name:'Marta Rybak', avatar:'MR', messages:[
-    {who:'received', text:'Wysyłam wycenę: 260 zł z materiałami.'},
+    {who:'received', text:'Wysyłam wycenę: 130 € z materiałami.'},
     {who:'sent', text:'Super, dziękuję. Kiedy najwcześniej Pani dostępna?'},
     {who:'received', text:'Mogę być pojutrze rano.'}
   ]}
@@ -2961,6 +2966,62 @@ setupFileAttach('takenLeadAttachBtn', 'takenLeadFileInput', {
 });
 
 /* ---------- Wysyłanie wiadomości tekstowych (naprawa: brakowało tej logiki) ---------- */
+/* ---------- Ochrona przed omijaniem płatności: wykrywanie danych kontaktowych ----------
+   UWAGA: w prawdziwej wersji to samo sprawdzanie MUSI działać na serwerze (Supabase),
+   bo kontrolę w przeglądarce da się obejść. Tu jest tylko pokaz działania. */
+const NUMBER_WORDS = ['zero','jeden','jedynka','dwa','trzy','cztery','pięć','piec','sześć','szesc','siedem','osiem','dziewięć','dziewiec',
+  'cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve',
+  'one','two','three','four','five','six','seven','eight','nine','oh'];
+function detectContactInfo(text){
+  const token = dict[currentLang].contact_hidden;
+  let found = false;
+  let t = text.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d)); // cyfry arabskie -> zwykłe
+  const hide = (re, test) => { t = t.replace(re, m => { if(test && !test(m)) return m; found = true; return token; }); };
+  // e-mail, także zapisany "at / małpa / arroba"
+  hide(/[\w.+-]+\s*(@|\(at\)|\[at\]|\bat\b|małpa|malpa|arroba)\s*[\w-]+\s*(\.|\bdot\b|kropka|punto)\s*[a-z]{2,}/gi);
+  // linki i komunikatory
+  hide(/(https?:\/\/|www\.)\S+/gi);
+  hide(/\bwa\.me\/\S*/gi);
+  hide(/\b[\w-]+\.(com|es|pl|net|org|eu|info|co\.uk)\b/gi);
+  hide(/(^|\s)@[\w.]{3,}/g);
+  hide(/\b(whats\s?app|whatsap|wasap|watsap|telegram|instagram|insta|facebook|fb|messenger|signal|viber|tiktok)\b/gi);
+  // numery telefonu: min. 8 cyfr, także z odstępami, kropkami, myślnikami (daty są pomijane)
+  hide(/(\+|00)?\d(?:[\s.\-()\/]{0,3}\d){7,}/g, m => {
+    const s = m.trim();
+    if(/^\d{1,2}[.\-\/]\d{1,2}[.\-\/]\d{2,4}$/.test(s) || /^\d{4}-\d{2}-\d{2}$/.test(s)) return false;
+    return s.replace(/\D/g,'').length >= 8;
+  });
+  // numery zapisane słownie ("seis cero cero...") - 6 lub więcej słów-cyfr pod rząd
+  const wordRe = new RegExp('(?:\\b(?:' + NUMBER_WORDS.join('|') + ')\\b[\\s,.\\-]*){6,}', 'gi');
+  hide(wordRe);
+  while(t.includes(token + token)) t = t.split(token + token).join(token);
+  return { found, masked: t };
+}
+function showGuardNote(anchorEl, key){
+  if(!anchorEl) return;
+  const holder = anchorEl.closest('.chat-input, .chat-input-row') || anchorEl;
+  let note = holder.parentElement.querySelector(':scope > .contact-guard-note');
+  if(!note){
+    note = document.createElement('p');
+    note.className = 'contact-guard-note';
+    holder.insertAdjacentElement('afterend', note);
+  }
+  note.textContent = dict[currentLang][key];
+  note.style.display = 'block';
+  clearTimeout(note._t);
+  note._t = setTimeout(()=>{ note.style.display = 'none'; }, 8000);
+}
+function guardTextField(fieldId, key){
+  const el = document.getElementById(fieldId);
+  if(!el) return;
+  el.addEventListener('blur', ()=>{
+    const r = detectContactInfo(el.value);
+    if(r.found){ el.value = r.masked; showGuardNote(el, key); }
+  });
+}
+guardTextField('reqDescription', 'guard_request');
+guardTextField('proAboutMe', 'guard_profile');
+
 function escapeHtml(str){
   const d = document.createElement('div');
   d.textContent = str;
@@ -2977,15 +3038,30 @@ function setupSendMessage(inputId, sendBtnId, opts){
     if(!text) return;
     const activeId = opts.getActiveId();
     if(!activeId || !opts.threadsObj[activeId]) return;
-    opts.threadsObj[activeId].messages.push({who:'sent', text: escapeHtml(text)});
+    const thread = opts.threadsObj[activeId];
+    let outText = text;
+    // Fachowiec nie może podać kontaktu, dopóki klient nie odpowie w czacie
+    if(opts.guardUntilClientReplies && !thread.messages.some(m => m.who === 'received')){
+      const r = detectContactInfo(text);
+      if(r.found){ outText = r.masked; showGuardNote(input, 'guard_chat'); }
+    }
+    thread.messages.push({who:'sent', text: escapeHtml(outText)});
     opts.renderFn(activeId);
     input.value = '';
     if(opts.getActiveConvItem){
       const convItem = opts.getActiveConvItem();
       if(convItem){
         const preview = convItem.querySelector('.preview');
-        if(preview) preview.textContent = text;
+        if(preview) preview.textContent = outText;
       }
+    }
+    // Prototyp: symulowana odpowiedź klienta w nowej rozmowie po odebraniu leada
+    if(thread.simulateClientReply){
+      thread.simulateClientReply = false;
+      setTimeout(()=>{
+        thread.messages.push({who:'received', text: dict[currentLang].pro_sim_client_reply});
+        opts.renderFn(activeId);
+      }, 2500);
     }
   }
 
@@ -3002,7 +3078,7 @@ setupSendMessage('clientMsgInput', 'clientSendBtn', {
 });
 setupSendMessage('proMsgInput', 'proSendBtn', {
   getActiveId: ()=>{ const a = document.querySelector('#proConvList .conv-item.active'); return a ? a.dataset.conv : null; },
-  threadsObj: proChatThreads, renderFn: renderProChat,
+  threadsObj: proChatThreads, renderFn: renderProChat, guardUntilClientReplies: true,
   getActiveConvItem: ()=> document.querySelector('#proConvList .conv-item.active')
 });
 setupSendMessage('empMsgInput', 'empSendBtn', {
@@ -3012,7 +3088,7 @@ setupSendMessage('empMsgInput', 'empSendBtn', {
 });
 setupSendMessage('takenLeadMsgInput', 'takenLeadSendBtn', {
   getActiveId: ()=> currentTakenLeadId,
-  threadsObj: proChatThreads, renderFn: renderTakenLeadChat,
+  threadsObj: proChatThreads, renderFn: renderTakenLeadChat, guardUntilClientReplies: true,
   getActiveConvItem: ()=> currentTakenLeadId ? document.querySelector('#proConvList .conv-item[data-conv="' + currentTakenLeadId + '"]') : null
 });
 
@@ -3352,22 +3428,22 @@ const jobCategories = [
 ];
 
 const jobSearchData = [
-  {title:'Kierowca kat. B', company:'Szybka Dostawa Sp. z o.o.', location:'Wrocław, Fabryczna', salary:'28 zł/h', industryKey:'industry_logistics', category:'jobcat_driver', desc:'Dostawy lokalne busem do 3,5t, praca od poniedziałku do piątku.'},
-  {title:'Kierowca kategorii C', company:'TransBud Logistyka', location:'Bielany Wrocławskie', salary:'32 zł/h', industryKey:'industry_logistics', category:'jobcat_driver', desc:'Transport krajowy, wymagane doświadczenie i aktualne badania.'},
-  {title:'Camarera de pisos', company:'Hotel Ibis Wrocław', location:'Wrocław, Krzyki', salary:'23 zł/h', industryKey:'industry_hotel', category:'jobcat_cleaner', desc:'Sprzątanie i przygotowanie pokoi hotelowych zgodnie ze standardem hotelu.'},
-  {title:'Sprzątaczka biurowa', company:'CleanPro Serwis', location:'Wrocław, Fabryczna', salary:'22 zł/h', industryKey:'industry_cleaning', category:'jobcat_cleaner', desc:'Sprzątanie powierzchni biurowych w godzinach porannych.'},
-  {title:'Kelnerka', company:'Restauracja Vinera', location:'Wrocław, Rynek', salary:'24 zł/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa gości restauracji, praca w systemie zmianowym, napiwki.'},
-  {title:'Kelner', company:'Hotel Puro Wrocław', location:'Wrocław, Stare Miasto', salary:'25 zł/h', industryKey:'industry_hotel', category:'jobcat_waiter', desc:'Obsługa śniadań i bankietów hotelowych.'},
-  {title:'Kelnerka na weekendy', company:'Restauracja Stara Piwnica', location:'Wrocław, Rynek', salary:'26 zł/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Praca w piątki, soboty i niedziele, idealne dla studentów.'},
-  {title:'Kelner z doświadczeniem', company:'Hotel Sofitel Wrocław', location:'Wrocław, Stare Miasto', salary:'28 zł/h', industryKey:'industry_hotel', category:'jobcat_waiter', desc:'Obsługa restauracji hotelowej i bankietów, wymagane min. 1 rok doświadczenia.'},
-  {title:'Kelnerka do kawiarni', company:'Kawiarnia Retro', location:'Wrocław, Krzyki', salary:'23 zł/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa gości kawiarni, przygotowywanie kawy, praca na zmiany.'},
-  {title:'Kelner na eventy', company:'EventCatering Wrocław', location:'Wrocław', salary:'30 zł/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa kelnerska wesel i eventów firmowych, praca weekendowa.'},
-  {title:'Kelnerka do restauracji włoskiej', company:'Trattoria Bella', location:'Wrocław, Rynek', salary:'25 zł/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa sali, znajomość podstaw kuchni włoskiej mile widziana.'},
-  {title:'Recepcjonistka', company:'Hotel Puro Wrocław', location:'Wrocław, Stare Miasto', salary:'26 zł/h', industryKey:'industry_hotel', category:'jobcat_reception', desc:'Obsługa gości hotelowych, check-in/check-out, praca zmianowa.'},
-  {title:'Magazynier', company:'Centrum Logistyczne Bielany', location:'Bielany Wrocławskie', salary:'27 zł/h', industryKey:'industry_logistics', category:'jobcat_warehouse', desc:'Kompletacja i pakowanie zamówień, mile widziane uprawnienia na wózek widłowy.'},
-  {title:'Pomoc kuchenna', company:'Hotel Radisson Blu', location:'Wrocław, Stare Miasto', salary:'25 zł/h', industryKey:'industry_gastro', category:'jobcat_kitchen', desc:'Pomoc przy przygotowaniu posiłków i utrzymanie porządku w kuchni.'},
-  {title:'Ochroniarz', company:'SecurePol', location:'Wrocław, Krzyki', salary:'25 zł/h', industryKey:'industry_other', category:'jobcat_security', desc:'Ochrona obiektu handlowego, praca zmianowa, wymagana licencja.'},
-  {title:'Sprzedawca', company:'Sklep Spożywczy Świeżak', location:'Wrocław, Psie Pole', salary:'22 zł/h', industryKey:'industry_retail', category:'jobcat_sales', desc:'Obsługa klienta i kasy fiskalnej w sklepie osiedlowym.'}
+  {title:'Kierowca kat. B', company:'Szybka Dostawa Sp. z o.o.', location:'San Pedro Alcántara', salary:'13 €/h', industryKey:'industry_logistics', category:'jobcat_driver', desc:'Dostawy lokalne busem do 3,5t, praca od poniedziałku do piątku.'},
+  {title:'Kierowca kategorii C', company:'TransBud Logistyka', location:'Málaga, Guadalhorce', salary:'15 €/h', industryKey:'industry_logistics', category:'jobcat_driver', desc:'Transport krajowy, wymagane doświadczenie i aktualne badania.'},
+  {title:'Camarera de pisos', company:'Hotel Playa Marbella', location:'Marbella, Nueva Andalucía', salary:'10 €/h', industryKey:'industry_hotel', category:'jobcat_cleaner', desc:'Sprzątanie i przygotowanie pokoi hotelowych zgodnie ze standardem hotelu.'},
+  {title:'Sprzątaczka biurowa', company:'CleanPro Serwis', location:'San Pedro Alcántara', salary:'10 €/h', industryKey:'industry_cleaning', category:'jobcat_cleaner', desc:'Sprzątanie powierzchni biurowych w godzinach porannych.'},
+  {title:'Kelnerka', company:'Restauracja Vinera', location:'Marbella, Puerto Banús', salary:'11 €/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa gości restauracji, praca w systemie zmianowym, napiwki.'},
+  {title:'Kelner', company:'Hotel Casco Antiguo', location:'Marbella, Casco Antiguo', salary:'11 €/h', industryKey:'industry_hotel', category:'jobcat_waiter', desc:'Obsługa śniadań i bankietów hotelowych.'},
+  {title:'Kelnerka na weekendy', company:'Restauracja Stara Piwnica', location:'Marbella, Puerto Banús', salary:'12 €/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Praca w piątki, soboty i niedziele, idealne dla studentów.'},
+  {title:'Kelner z doświadczeniem', company:'Hotel Mar Azul', location:'Marbella, Casco Antiguo', salary:'13 €/h', industryKey:'industry_hotel', category:'jobcat_waiter', desc:'Obsługa restauracji hotelowej i bankietów, wymagane min. 1 rok doświadczenia.'},
+  {title:'Kelnerka do kawiarni', company:'Kawiarnia Retro', location:'Marbella, Nueva Andalucía', salary:'10 €/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa gości kawiarni, przygotowywanie kawy, praca na zmiany.'},
+  {title:'Kelner na eventy', company:'EventCatering Marbella', location:'Marbella', salary:'14 €/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa kelnerska wesel i eventów firmowych, praca weekendowa.'},
+  {title:'Kelnerka do restauracji włoskiej', company:'Trattoria Bella', location:'Marbella, Puerto Banús', salary:'11 €/h', industryKey:'industry_gastro', category:'jobcat_waiter', desc:'Obsługa sali, znajomość podstaw kuchni włoskiej mile widziana.'},
+  {title:'Recepcjonistka', company:'Hotel Casco Antiguo', location:'Marbella, Casco Antiguo', salary:'12 €/h', industryKey:'industry_hotel', category:'jobcat_reception', desc:'Obsługa gości hotelowych, check-in/check-out, praca zmianowa.'},
+  {title:'Magazynier', company:'Centro Logístico Guadalhorce', location:'Málaga, Guadalhorce', salary:'12 €/h', industryKey:'industry_logistics', category:'jobcat_warehouse', desc:'Kompletacja i pakowanie zamówień, mile widziane uprawnienia na wózek widłowy.'},
+  {title:'Pomoc kuchenna', company:'Hotel Sol de Banús', location:'Marbella, Casco Antiguo', salary:'11 €/h', industryKey:'industry_gastro', category:'jobcat_kitchen', desc:'Pomoc przy przygotowaniu posiłków i utrzymanie porządku w kuchni.'},
+  {title:'Ochroniarz', company:'SecurePol', location:'Marbella, Nueva Andalucía', salary:'11 €/h', industryKey:'industry_other', category:'jobcat_security', desc:'Ochrona obiektu handlowego, praca zmianowa, wymagana licencja.'},
+  {title:'Sprzedawca', company:'Sklep Spożywczy Świeżak', location:'Estepona', salary:'10 €/h', industryKey:'industry_retail', category:'jobcat_sales', desc:'Obsługa klienta i kasy fiskalnej w sklepie osiedlowym.'}
 ];
 
 const jobSearchInput = document.getElementById('jobSearchQuery');
@@ -3600,7 +3676,7 @@ const proPortfolios = {
   },
   'Tomasz Nowicki': {
     specialization: 'Hydraulika', rating: 4.4, count: 12,
-    bio: 'Szybkie interwencje hydrauliczne na terenie Wrocławia, dostępny również w weekendy.',
+    bio: 'Szybkie interwencje hydrauliczne na terenie Marbelli, dostępny również w weekendy.',
     photos: ['https://cdn.pixabay.com/photo/2019/04/15/18/13/bathroom-4130000_640.jpg']
   },
   'Ewa Malinowska': {
@@ -3625,7 +3701,7 @@ const proPortfolios = {
   },
   'Marek Nowak': {
     specialization: 'Elektryka', rating: 4.7, count: 34,
-    bio: 'Elektryk z uprawnieniami SEP, montaż instalacji, ładowarek EV i automatyki domowej.',
+    bio: 'Elektryk z certyfikatem instalatora (REBT), montaż instalacji, ładowarek EV i automatyki domowej.',
     photos: ['https://cdn.pixabay.com/photo/2019/05/12/15/07/electric-4198293_640.jpg']
   }
 };
@@ -3664,34 +3740,34 @@ document.querySelectorAll('.pro-item [data-i18n="btn_view_profile"]').forEach(bt
 
 const clientOrders = [
   {
-    id: 1, title: 'Wymiana baterii i naprawa syfonu — Wrocław', category: 'Hydraulika', location: 'Wrocław, Krzyki',
+    id: 1, title: 'Wymiana baterii i naprawa syfonu — Marbella', category: 'Hydraulika', location: 'Marbella, Nueva Andalucía',
     addedText: 'dodano 3 dni temu', status: 'new',
     desc: 'Cieknąca bateria w łazience oraz zapchany syfon pod umywalką w kuchni. Najlepiej w godzinach popołudniowych, w tygodniu.',
-    budget: '150–300 zł', date: 'w tym tygodniu',
+    budget: '80–150 €', date: 'w tym tygodniu',
     offers: [
-      {name:'Jakub Kowalczyk', avatar:'JK', rating:4.8, count:63, price:'220 zł', availability:'dostępny jutro', message:'„Robię to od 8 lat, mogę przyjechać jutro po 15:00 i ocenić na miejscu.”', recommended:true, status:null, reviewQuote:'Solidnie i na czas, polecam każdemu.', reviewAuthor:'Anna W.'},
-      {name:'Marta Rybak', avatar:'MR', rating:4.6, count:21, price:'260 zł', availability:'dostępna pojutrze', message:'„Mogę też dokupić potrzebne części po drodze, w cenie doliczę tylko koszt materiałów.”', status:null, reviewQuote:'Bardzo miła i konkretna, szybko naprawiła usterkę.', reviewAuthor:'Tomasz K.'},
-      {name:'Tomasz Nowicki', avatar:'TN', rating:4.4, count:12, price:'195 zł', availability:'dostępny dziś', message:'„Jestem akurat w Krzykach, mogę wpaść jeszcze dziś wieczorem.”', status:null, reviewQuote:'Przyjechał tego samego dnia, dobra cena.', reviewAuthor:'Marek S.'}
+      {name:'Jakub Kowalczyk', avatar:'JK', rating:4.8, count:63, price:'110 €', availability:'dostępny jutro', message:'„Robię to od 8 lat, mogę przyjechać jutro po 15:00 i ocenić na miejscu.”', recommended:true, status:null, reviewQuote:'Solidnie i na czas, polecam każdemu.', reviewAuthor:'Anna W.'},
+      {name:'Marta Rybak', avatar:'MR', rating:4.6, count:21, price:'130 €', availability:'dostępna pojutrze', message:'„Mogę też dokupić potrzebne części po drodze, w cenie doliczę tylko koszt materiałów.”', status:null, reviewQuote:'Bardzo miła i konkretna, szybko naprawiła usterkę.', reviewAuthor:'Tomasz K.'},
+      {name:'Tomasz Nowicki', avatar:'TN', rating:4.4, count:12, price:'95 €', availability:'dostępny dziś', message:'„Jestem akurat w Nueva Andalucía, mogę wpaść jeszcze dziś wieczorem.”', status:null, reviewQuote:'Przyjechał tego samego dnia, dobra cena.', reviewAuthor:'Marek S.'}
     ]
   },
   {
-    id: 2, title: 'Malowanie salonu i przedpokoju — Wrocław', category: 'Malowanie', location: 'Wrocław',
+    id: 2, title: 'Malowanie salonu i przedpokoju — Marbella', category: 'Malowanie', location: 'Marbella',
     addedText: 'dodano 6 dni temu', status: 'progress',
     desc: 'Malowanie ścian salonu i przedpokoju na jasny, ciepły odcień szarości. Powierzchnia ok. 45 m².',
-    budget: '400–600 zł', date: 'w przyszłym tygodniu',
+    budget: '400–600 €', date: 'w przyszłym tygodniu',
     offers: [
-      {name:'Ewa Malinowska', avatar:'EM', rating:4.9, count:41, price:'480 zł', availability:'dostępna od poniedziałku', message:'„Mam doświadczenie z farbami lateksowymi, mogę też pomóc dobrać kolor.”', status:'accepted', reviewQuote:'Idealnie równe ściany, posprzątała po sobie.', reviewAuthor:'Katarzyna M.'},
-      {name:'Rafał Dąbrowski', avatar:'RD', rating:4.3, count:18, price:'520 zł', availability:'dostępny za tydzień', message:'„Mogę zacząć dopiero za tydzień.”', status:'rejected', reviewQuote:'Dobra robota, drobne opóźnienie w kontakcie.', reviewAuthor:'Tomasz P.'},
-      {name:'Kamil Zieliński', avatar:'KZ', rating:4.1, count:9, price:'450 zł', availability:'dostępny jutro', message:'„Konkurencyjna cena, szybki termin.”', status:'rejected', reviewQuote:'W porządku, ale bez rewelacji.', reviewAuthor:'Piotr N.'}
+      {name:'Ewa Malinowska', avatar:'EM', rating:4.9, count:41, price:'480 €', availability:'dostępna od poniedziałku', message:'„Mam doświadczenie z farbami lateksowymi, mogę też pomóc dobrać kolor.”', status:'accepted', reviewQuote:'Idealnie równe ściany, posprzątała po sobie.', reviewAuthor:'Katarzyna M.'},
+      {name:'Rafał Dąbrowski', avatar:'RD', rating:4.3, count:18, price:'520 €', availability:'dostępny za tydzień', message:'„Mogę zacząć dopiero za tydzień.”', status:'rejected', reviewQuote:'Dobra robota, drobne opóźnienie w kontakcie.', reviewAuthor:'Tomasz P.'},
+      {name:'Kamil Zieliński', avatar:'KZ', rating:4.1, count:9, price:'450 €', availability:'dostępny jutro', message:'„Konkurencyjna cena, szybki termin.”', status:'rejected', reviewQuote:'W porządku, ale bez rewelacji.', reviewAuthor:'Piotr N.'}
     ]
   },
   {
-    id: 3, title: 'Montaż płytek w łazience', category: 'Płytki i glazura', location: 'Wrocław',
+    id: 3, title: 'Montaż płytek w łazience', category: 'Płytki i glazura', location: 'Marbella',
     addedText: 'zakończono 2 tyg. temu', status: 'done',
     desc: 'Ułożenie płytek 60x30 na ścianach i podłodze łazienki, ok. 12 m².',
-    budget: '700–900 zł', date: 'zrealizowano',
+    budget: '700–900 €', date: 'zrealizowano',
     offers: [
-      {name:'Piotr Wiśniewski', avatar:'PW', rating:4.7, count:55, price:'780 zł', availability:'', message:'„Dziękuję za zlecenie, robota wykonana zgodnie z ustaleniami.”', status:'accepted', reviewQuote:'Równe fugi, zero odprysków, godny polecenia.', reviewAuthor:'Robert A.'}
+      {name:'Piotr Wiśniewski', avatar:'PW', rating:4.7, count:55, price:'780 €', availability:'', message:'„Dziękuję za zlecenie, robota wykonana zgodnie z ustaleniami.”', status:'accepted', reviewQuote:'Równe fugi, zero odprysków, godny polecenia.', reviewAuthor:'Robert A.'}
     ]
   }
 ];
@@ -4042,12 +4118,12 @@ const dict = {
     how_2_title:"Otrzymaj oferty", how_2_desc:"Zainteresowani fachowcy odpowiadają z wyceną i dostępnością.",
     how_3_title:"Wybierz i oceń", how_3_desc:"Porównujesz oferty i opinie, wybierasz najlepszą i po realizacji wystawiasz ocenę.",
     pricing_title:"Dla fachowców", pricing_sub:"Prosty model: niski abonament + punkty za leady, z gwarancją zwrotu",
-    plan_starter_name:"Starter", plan_starter_desc:"Dla fachowców, którzy zaczynają", plan_starter_price:"29 zł / mies.", plan_starter_lead:"Lead od 2 pkt · punkty zawsze kupowane osobno",
-    plan_pro_name:"Pro", plan_pro_desc:"Dla stałych zleceń i niższych kosztów leadów", plan_pro_price:"79 zł / mies.", plan_pro_lead:"Lead od 1 pkt (2x taniej niż Starter)",
+    plan_starter_name:"Starter", plan_starter_desc:"Dla fachowców, którzy zaczynają", plan_starter_price:"7 € / mies.", plan_starter_lead:"Leady od 1 pkt · 1 pkt = 1 €",
+    plan_pro_name:"Pro", plan_pro_desc:"Dla stałych zleceń i niższych kosztów leadów", plan_pro_price:"18 € / mies.", plan_pro_lead:"+20% punktów gratis przy każdym zakupie",
     plan_pro_benefit_1:"Widzisz nowe leady 15 minut wcześniej niż Starter",
     plan_pro_benefit_2:"Zwrot punktów już po 24h braku odpowiedzi (Starter: 48h)",
     plan_pro_benefit_3:"Odznaka „Polecany fachowiec” przy każdej ofercie",
-    plan_promax_name:"Pro Max", plan_promax_desc:"Dla fachowców, którzy chcą być pierwsi", plan_promax_price:"149 zł / mies.", plan_promax_lead:"Lead od 1 pkt · najniższy koszt na rynku",
+    plan_promax_name:"Pro Max", plan_promax_desc:"Dla fachowców, którzy chcą być pierwsi", plan_promax_price:"35 € / mies.", plan_promax_lead:"+40% punktów gratis przy każdym zakupie",
     plan_promax_benefit_1:"Leady 30 minut wcześniej niż Starter", plan_promax_benefit_2:"Priorytetowa obsługa zgłoszeń wsparcia", plan_promax_benefit_3:"Priorytetowe miejsce w wynikach u klienta", plan_promax_benefit_4:"Zwrot punktów już po 12h braku odpowiedzi",
     plan_badge_premium:"Premium", pro_sub_plan_promax:"Plan Pro Max",
     guarantee_note_promax:"Twoja gwarancja Pro Max: zwrot punktów już po 12h braku odpowiedzi klienta — punkty ważne 180 dni.",
@@ -4099,7 +4175,7 @@ const dict = {
     pro_status_client_accepted:"Klient zaakceptował ofertę — umów termin",
     btn_delete_chat:"Usuń rozmowę",
     step_category:"Kategoria", step_details:"Szczegóły", step_location:"Lokalizacja i termin", step_summary:"Podsumowanie",
-    form_description:"Opis zlecenia", form_budget:"Budżet (zł)", form_location:"Lokalizacja", form_date:"Preferowany termin",
+    form_description:"Opis zlecenia", form_budget:"Budżet (€)", form_location:"Lokalizacja", form_date:"Preferowany termin",
     btn_next:"Dalej", btn_submit_request:"Wyślij zlecenie",
     request_sent_title:"Zlecenie wysłane!", request_sent_desc:"Powiadomimy Cię, gdy fachowcy zaczną się zgłaszać z ofertami.",
     chat_placeholder:"Napisz wiadomość...", btn_send:"Wyślij",
@@ -4126,7 +4202,7 @@ const dict = {
     pro_taken_title:"Odebrane leady", pro_taken_status:"Oczekuje na odpowiedź klienta", pro_refunded_status:"Zwrócono punkty ✓",
     buy_points_title:"Kup punkty", buy_points_sub:"Punkty ważne 180 dni od zakupu.", btn_buy:"Kup", btn_report_no_reply:"Zgłoś brak odpowiedzi",
     btn_open_conversation:"Otwórz rozmowę", lead_detail_client_label:"Zleceniodawca",
-    pro_verified_badge:"✓ Zweryfikowany", pro_profile_subline:"Elektryk · Wrocław i okolice · w VeloApp od marca 2026",
+    pro_verified_badge:"✓ Zweryfikowany", pro_profile_subline:"Elektryk · Marbella i okolice · w VeloApp od marca 2026",
     pro_contact_title:"Dane kontaktowe", pro_phone_label:"Telefon",
     pro_specializations_title:"Specjalizacje", pro_specializations_sub:"Wybierz kategorie, w których przyjmujesz leady.", btn_edit:"Edytuj",
     pro_range_label:"Zasięg działania", pro_range_5:"do 5 km", pro_range_10:"do 10 km", pro_range_15:"do 15 km", pro_range_25:"do 25 km", pro_range_50:"do 50 km",
@@ -4136,7 +4212,8 @@ const dict = {
     pro_portfolio_title:"Portfolio", pro_portfolio_sub:"Zdjęcia zrealizowanych zleceń zwiększają zaufanie klientów.", pro_add_photo:"Dodaj zdjęcie",
     pro_about_label:"O mnie", pro_about_placeholder:"Napisz kilka zdań o sobie i swoim doświadczeniu...",
     pro_view_portfolio:"Zobacz portfolio →", pro_card_note:"Zdjęcia zrealizowanych zleceń, dodane przez fachowca.",
-    pro_certs_title:"Uprawnienia i certyfikaty", pro_cert_example:"Uprawnienia SEP do 1 kV", pro_cert_verified:"Zweryfikowane", pro_add_cert:"+ Dodaj uprawnienie",
+    contact_hidden:"[ukryte]", guard_request:"Ukryliśmy dane kontaktowe w opisie. Fachowcy skontaktują się z Tobą przez VeloApp, dzięki temu nie dostaniesz telefonów od przypadkowych osób.", guard_profile:"Ukryliśmy dane kontaktowe w opisie profilu. Klienci kontaktują się z Tobą przez VeloApp i tylko takie zlecenia liczą się do Twoich opinii.", guard_chat:"Dane kontaktowe możesz podać, gdy klient odpowie w czacie. Do tego czasu są ukryte.", pro_sim_client_reply:"Dzień dobry, dziękuję za odpowiedź. Kiedy mógłby Pan/Pani przyjść?",
+    pro_certs_title:"Uprawnienia i certyfikaty", pro_cert_example:"Instalator autoryzowany niskiego napięcia (REBT)", pro_cert_verified:"Zweryfikowane", pro_add_cert:"+ Dodaj uprawnienie",
     pro_add_cert_prompt:"Nazwa uprawnienia lub certyfikatu:", pro_cert_pending:"Oczekuje na weryfikację",
     pro_notif_leads:"Nowe leady w Twoich kategoriach", pro_notif_messages:"Wiadomości od klientów", pro_notif_renewal:"Przypomnienie o odnowieniu abonamentu",
     pro_profile_saved:"✓ Zmiany zapisane.",
@@ -4210,12 +4287,12 @@ const dict = {
     how_2_title:"Get offers", how_2_desc:"Interested professionals reply with a quote and availability.",
     how_3_title:"Choose and rate", how_3_desc:"Compare offers and reviews, pick the best one, then leave a rating.",
     pricing_title:"For professionals", pricing_sub:"A simple model: low subscription + points for leads, with a refund guarantee",
-    plan_starter_name:"Starter", plan_starter_desc:"For professionals just getting started", plan_starter_price:"€7 / month", plan_starter_lead:"Lead from 2 pts · points always bought separately",
-    plan_pro_name:"Pro", plan_pro_desc:"For steady work and lower lead costs", plan_pro_price:"€18 / month", plan_pro_lead:"Lead from 1 pt (2x cheaper than Starter)",
+    plan_starter_name:"Starter", plan_starter_desc:"For professionals just getting started", plan_starter_price:"€7 / month", plan_starter_lead:"Leads from 1 pt · 1 pt = €1",
+    plan_pro_name:"Pro", plan_pro_desc:"For steady work and lower lead costs", plan_pro_price:"€18 / month", plan_pro_lead:"+20% free points on every purchase",
     plan_pro_benefit_1:"See new leads 15 minutes before Starter",
     plan_pro_benefit_2:"Points refunded after just 24h of no reply (Starter: 48h)",
     plan_pro_benefit_3:"\"Recommended professional\" badge on every offer",
-    plan_promax_name:"Pro Max", plan_promax_desc:"For professionals who want to be first", plan_promax_price:"€35 / month", plan_promax_lead:"Lead from 1 pt · lowest cost on the market",
+    plan_promax_name:"Pro Max", plan_promax_desc:"For professionals who want to be first", plan_promax_price:"€35 / month", plan_promax_lead:"+40% free points on every purchase",
     plan_promax_benefit_1:"Leads 30 minutes before Starter", plan_promax_benefit_2:"Priority support handling", plan_promax_benefit_3:"Priority placement in client results", plan_promax_benefit_4:"Points refunded after just 12h of no reply",
     plan_badge_premium:"Premium", pro_sub_plan_promax:"Pro Max plan",
     guarantee_note_promax:"Your Pro Max guarantee: points refunded after just 12h of no client reply — points valid for 180 days.",
@@ -4294,7 +4371,7 @@ const dict = {
     pro_taken_title:"Accepted leads", pro_taken_status:"Waiting for client reply", pro_refunded_status:"Points refunded ✓",
     buy_points_title:"Buy points", buy_points_sub:"Points are valid for 180 days from purchase.", btn_buy:"Buy", btn_report_no_reply:"Report no reply",
     btn_open_conversation:"Open conversation", lead_detail_client_label:"Client",
-    pro_verified_badge:"✓ Verified", pro_profile_subline:"Electrician · Wrocław area · on VeloApp since March 2026",
+    pro_verified_badge:"✓ Verified", pro_profile_subline:"Electrician · Marbella area · on VeloApp since March 2026",
     pro_contact_title:"Contact details", pro_phone_label:"Phone",
     pro_specializations_title:"Specializations", pro_specializations_sub:"Choose the categories you accept leads in.", btn_edit:"Edit",
     pro_range_label:"Service range", pro_range_5:"up to 5 km", pro_range_10:"up to 10 km", pro_range_15:"up to 15 km", pro_range_25:"up to 25 km", pro_range_50:"up to 50 km",
@@ -4304,7 +4381,8 @@ const dict = {
     pro_portfolio_title:"Portfolio", pro_portfolio_sub:"Photos of completed jobs build client trust.", pro_add_photo:"Add photo",
     pro_about_label:"About me", pro_about_placeholder:"Write a few sentences about yourself and your experience...",
     pro_view_portfolio:"View portfolio →", pro_card_note:"Photos of completed jobs, added by the professional.",
-    pro_certs_title:"Licenses & certificates", pro_cert_example:"Electrical license up to 1 kV", pro_cert_verified:"Verified", pro_add_cert:"+ Add license",
+    contact_hidden:"[hidden]", guard_request:"We hid the contact details in your description. Professionals will contact you through VeloApp, so you won't get calls from random people.", guard_profile:"We hid the contact details in your profile. Clients contact you through VeloApp, and only those jobs count towards your reviews.", guard_chat:"You can share contact details once the client replies in the chat. Until then they are hidden.", pro_sim_client_reply:"Hello, thanks for your reply. When could you come over?",
+    pro_certs_title:"Licenses & certificates", pro_cert_example:"Authorised low-voltage installer (REBT)", pro_cert_verified:"Verified", pro_add_cert:"+ Add license",
     pro_add_cert_prompt:"License or certificate name:", pro_cert_pending:"Pending verification",
     pro_notif_leads:"New leads in your categories", pro_notif_messages:"Messages from clients", pro_notif_renewal:"Subscription renewal reminder",
     pro_profile_saved:"✓ Changes saved.",
@@ -4378,12 +4456,12 @@ const dict = {
     how_2_title:"Recibe ofertas", how_2_desc:"Los profesionales interesados responden con presupuesto y disponibilidad.",
     how_3_title:"Elige y valora", how_3_desc:"Compara ofertas y opiniones, elige la mejor y luego deja tu valoración.",
     pricing_title:"Para profesionales", pricing_sub:"Un modelo simple: suscripción baja + puntos por leads, con garantía de devolución",
-    plan_starter_name:"Starter", plan_starter_desc:"Para profesionales que empiezan", plan_starter_price:"7 € / mes", plan_starter_lead:"Lead desde 2 pts · puntos siempre comprados aparte",
-    plan_pro_name:"Pro", plan_pro_desc:"Para trabajo constante y leads más baratos", plan_pro_price:"18 € / mes", plan_pro_lead:"Lead desde 1 pt (2x más barato que Starter)",
+    plan_starter_name:"Starter", plan_starter_desc:"Para profesionales que empiezan", plan_starter_price:"7 € / mes", plan_starter_lead:"Leads desde 1 pt · 1 pt = 1 €",
+    plan_pro_name:"Pro", plan_pro_desc:"Para trabajo constante y leads más baratos", plan_pro_price:"18 € / mes", plan_pro_lead:"+20% de puntos gratis en cada compra",
     plan_pro_benefit_1:"Ves los nuevos leads 15 minutos antes que Starter",
     plan_pro_benefit_2:"Puntos reembolsados tras solo 24h sin respuesta (Starter: 48h)",
     plan_pro_benefit_3:"Insignia «Profesional recomendado» en cada oferta",
-    plan_promax_name:"Pro Max", plan_promax_desc:"Para profesionales que quieren ser los primeros", plan_promax_price:"35 € / mes", plan_promax_lead:"Lead desde 1 pt · el coste más bajo del mercado",
+    plan_promax_name:"Pro Max", plan_promax_desc:"Para profesionales que quieren ser los primeros", plan_promax_price:"35 € / mes", plan_promax_lead:"+40% de puntos gratis en cada compra",
     plan_promax_benefit_1:"Leads 30 minutos antes que Starter", plan_promax_benefit_2:"Atención de soporte prioritaria", plan_promax_benefit_3:"Posición prioritaria en los resultados del cliente", plan_promax_benefit_4:"Puntos reembolsados tras solo 12h sin respuesta",
     plan_badge_premium:"Premium", pro_sub_plan_promax:"Plan Pro Max",
     guarantee_note_promax:"Tu garantía Pro Max: puntos reembolsados tras solo 12h sin respuesta del cliente — puntos válidos 180 días.",
@@ -4462,7 +4540,7 @@ const dict = {
     pro_taken_title:"Leads aceptados", pro_taken_status:"Esperando respuesta del cliente", pro_refunded_status:"Puntos devueltos ✓",
     buy_points_title:"Comprar puntos", buy_points_sub:"Los puntos son válidos 180 días desde la compra.", btn_buy:"Comprar", btn_report_no_reply:"Reportar falta de respuesta",
     btn_open_conversation:"Abrir conversación", lead_detail_client_label:"Cliente",
-    pro_verified_badge:"✓ Verificado", pro_profile_subline:"Electricista · Wrocław y alrededores · en VeloApp desde marzo de 2026",
+    pro_verified_badge:"✓ Verificado", pro_profile_subline:"Electricista · Marbella y alrededores · en VeloApp desde marzo de 2026",
     pro_contact_title:"Datos de contacto", pro_phone_label:"Teléfono",
     pro_specializations_title:"Especializaciones", pro_specializations_sub:"Elige las categorías en las que aceptas leads.", btn_edit:"Editar",
     pro_range_label:"Radio de servicio", pro_range_5:"hasta 5 km", pro_range_10:"hasta 10 km", pro_range_15:"hasta 15 km", pro_range_25:"hasta 25 km", pro_range_50:"hasta 50 km",
@@ -4472,7 +4550,8 @@ const dict = {
     pro_portfolio_title:"Portafolio", pro_portfolio_sub:"Las fotos de trabajos realizados generan confianza.", pro_add_photo:"Añadir foto",
     pro_about_label:"Sobre mí", pro_about_placeholder:"Escribe algunas frases sobre ti y tu experiencia...",
     pro_view_portfolio:"Ver portafolio →", pro_card_note:"Fotos de trabajos realizados, añadidas por el profesional.",
-    pro_certs_title:"Licencias y certificados", pro_cert_example:"Licencia eléctrica hasta 1 kV", pro_cert_verified:"Verificado", pro_add_cert:"+ Añadir licencia",
+    contact_hidden:"[oculto]", guard_request:"Hemos ocultado los datos de contacto de tu descripción. Los profesionales te contactarán a través de VeloApp, así no recibirás llamadas de desconocidos.", guard_profile:"Hemos ocultado los datos de contacto de tu perfil. Los clientes te contactan a través de VeloApp y solo esos trabajos cuentan para tus valoraciones.", guard_chat:"Podrás compartir tus datos de contacto cuando el cliente responda en el chat. Hasta entonces están ocultos.", pro_sim_client_reply:"Hola, gracias por responder. ¿Cuándo podría venir?",
+    pro_certs_title:"Licencias y certificados", pro_cert_example:"Instalador autorizado en Baja Tensión (REBT)", pro_cert_verified:"Verificado", pro_add_cert:"+ Añadir licencia",
     pro_add_cert_prompt:"Nombre de la licencia o certificado:", pro_cert_pending:"Pendiente de verificación",
     pro_notif_leads:"Nuevos leads en tus categorías", pro_notif_messages:"Mensajes de clientes", pro_notif_renewal:"Recordatorio de renovación de suscripción",
     pro_profile_saved:"✓ Cambios guardados.",
@@ -4546,12 +4625,12 @@ const dict = {
     how_2_title:"احصل على عروض", how_2_desc:"يرد المحترفون المهتمون بعرض السعر والتوفر.",
     how_3_title:"اختر وقيّم", how_3_desc:"قارن العروض والتقييمات، اختر الأفضل، ثم أضف تقييمك.",
     pricing_title:"للمحترفين", pricing_sub:"نموذج بسيط: اشتراك منخفض + نقاط مقابل العملاء المحتملين، مع ضمان استرداد",
-    plan_starter_name:"Starter", plan_starter_desc:"للمحترفين المبتدئين", plan_starter_price:"7 يورو / شهريًا", plan_starter_lead:"العميل المحتمل من نقطتين · تُشترى النقاط دائمًا بشكل منفصل",
-    plan_pro_name:"Pro", plan_pro_desc:"للعمل المنتظم وتكلفة أقل للعملاء المحتملين", plan_pro_price:"18 يورو / شهريًا", plan_pro_lead:"العميل المحتمل من نقطة واحدة (أرخص بمرتين من Starter)",
+    plan_starter_name:"Starter", plan_starter_desc:"للمحترفين المبتدئين", plan_starter_price:"7 يورو / شهريًا", plan_starter_lead:"العملاء المحتملون من نقطة واحدة · النقطة = 1 يورو",
+    plan_pro_name:"Pro", plan_pro_desc:"للعمل المنتظم وتكلفة أقل للعملاء المحتملين", plan_pro_price:"18 يورو / شهريًا", plan_pro_lead:"+20% نقاط مجانية مع كل عملية شراء",
     plan_pro_benefit_1:"تشاهد العملاء المحتملين الجدد قبل 15 دقيقة من Starter",
     plan_pro_benefit_2:"استرداد النقاط بعد 24 ساعة فقط من عدم الرد (Starter: 48 ساعة)",
     plan_pro_benefit_3:"شارة «محترف موصى به» على كل عرض",
-    plan_promax_name:"Pro Max", plan_promax_desc:"للمحترفين الذين يريدون أن يكونوا الأوائل", plan_promax_price:"35 يورو / شهريًا", plan_promax_lead:"العميل المحتمل من نقطة واحدة · أقل تكلفة في السوق",
+    plan_promax_name:"Pro Max", plan_promax_desc:"للمحترفين الذين يريدون أن يكونوا الأوائل", plan_promax_price:"35 يورو / شهريًا", plan_promax_lead:"+40% نقاط مجانية مع كل عملية شراء",
     plan_promax_benefit_1:"عملاء محتملون قبل 30 دقيقة من Starter", plan_promax_benefit_2:"معالجة أولوية لطلبات الدعم", plan_promax_benefit_3:"ظهور أولوية في نتائج العميل", plan_promax_benefit_4:"استرداد النقاط بعد 12 ساعة فقط من عدم الرد",
     plan_badge_premium:"مميز", pro_sub_plan_promax:"خطة Pro Max",
     guarantee_note_promax:"ضمانك في Pro Max: استرداد النقاط بعد 12 ساعة فقط من عدم رد العميل — النقاط صالحة 180 يومًا.",
@@ -4630,7 +4709,7 @@ const dict = {
     pro_taken_title:"العملاء المحتملون المقبولون", pro_taken_status:"بانتظار رد العميل", pro_refunded_status:"تم استرداد النقاط ✓",
     buy_points_title:"شراء نقاط", buy_points_sub:"النقاط صالحة لمدة 180 يومًا من الشراء.", btn_buy:"شراء", btn_report_no_reply:"الإبلاغ عن عدم الرد",
     btn_open_conversation:"فتح المحادثة", lead_detail_client_label:"العميل",
-    pro_verified_badge:"✓ موثّق", pro_profile_subline:"كهربائي · منطقة فروتسواف · على VeloApp منذ مارس 2026",
+    pro_verified_badge:"✓ موثّق", pro_profile_subline:"كهربائي · منطقة ماربيا · على VeloApp منذ مارس 2026",
     pro_contact_title:"بيانات التواصل", pro_phone_label:"الهاتف",
     pro_specializations_title:"التخصصات", pro_specializations_sub:"اختر الفئات التي تقبل فيها العملاء المحتملين.", btn_edit:"تعديل",
     pro_range_label:"نطاق الخدمة", pro_range_5:"حتى 5 كم", pro_range_10:"حتى 10 كم", pro_range_15:"حتى 15 كم", pro_range_25:"حتى 25 كم", pro_range_50:"حتى 50 كم",
@@ -4640,7 +4719,8 @@ const dict = {
     pro_portfolio_title:"معرض الأعمال", pro_portfolio_sub:"صور الأعمال المنجزة تبني ثقة العملاء.", pro_add_photo:"إضافة صورة",
     pro_about_label:"نبذة عني", pro_about_placeholder:"اكتب بضع جمل عن نفسك وخبرتك...",
     pro_view_portfolio:"عرض معرض الأعمال ←", pro_card_note:"صور الأعمال المنجزة، أضافها المحترف.",
-    pro_certs_title:"التراخيص والشهادات", pro_cert_example:"رخصة كهرباء حتى 1 كيلوفولت", pro_cert_verified:"موثّق", pro_add_cert:"+ إضافة ترخيص",
+    contact_hidden:"[مخفي]", guard_request:"أخفينا بيانات الاتصال من وصفك. سيتواصل معك المهنيون عبر VeloApp، حتى لا تتلقى مكالمات من أشخاص غرباء.", guard_profile:"أخفينا بيانات الاتصال من ملفك الشخصي. يتواصل معك العملاء عبر VeloApp، وهذه الأعمال فقط تُحتسب في تقييماتك.", guard_chat:"يمكنك مشاركة بيانات الاتصال بعد أن يرد العميل في المحادثة. حتى ذلك الحين تبقى مخفية.", pro_sim_client_reply:"مرحبًا، شكرًا على ردك. متى يمكنك الحضور؟",
+    pro_certs_title:"التراخيص والشهادات", pro_cert_example:"مركّب كهربائي معتمد للجهد المنخفض (REBT)", pro_cert_verified:"موثّق", pro_add_cert:"+ إضافة ترخيص",
     pro_add_cert_prompt:"اسم الترخيص أو الشهادة:", pro_cert_pending:"بانتظار التحقق",
     pro_notif_leads:"عملاء محتملون جدد في فئاتك", pro_notif_messages:"رسائل من العملاء", pro_notif_renewal:"تذكير بتجديد الاشتراك",
     pro_profile_saved:"✓ تم حفظ التغييرات.",
