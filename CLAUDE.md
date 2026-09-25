@@ -51,6 +51,10 @@ Fachowiec płaci za odebranie leada, więc dane kontaktowe nie mogą "wyciec" wc
 - **Filtr danych kontaktowych działa na serwerze** (Supabase, np. Edge Function lub trigger), nie tylko w przeglądarce. Wzór logiki: funkcja `detectContactInfo` w prototypie `index.html`.
 - Filtr wykrywa: numery telefonów (min. 8 cyfr, także z odstępami/kropkami/myślnikami, +34/+48/+44, cyfry arabskie), e-maile (także "at", "małpa", "arroba"), linki, wa.me, @nazwy kont, nazwy komunikatorów i sieci społecznościowych, liczby zapisane słownie (PL/ES/EN). Daty nie mogą być blokowane.
 - Filtrowane pola: opis zlecenia, opis profilu fachowca ("O mnie"), podpisy zdjęć, opinie, wiadomości w czacie.
+- Filtr liczy "wagę" ciągów cyfr i słów-liczb razem (np. "537 dwa zero dwa 3 osiem dwa"), wykrywa nazwy użytkowników ("s.wilar2") i nie blokuje normalnych danych (daty, godziny, metraże, 30x60, RAL9010).
+- **Sam filtr regułowy nie wystarczy** – zawsze da się go obejść (np. "szukaj mnie na fejsie jako Wilar Budowlanka"). Dlatego:
+  1. **Moderacja AI na serwerze:** każdy opis zlecenia i pierwsze wiadomości fachowca przed odpowiedzią klienta sprawdza model AI z pytaniem "czy ten tekst zawiera sposób na kontakt poza platformą?". Podejrzane teksty trafiają do kolejki w panelu admina przed publikacją.
+  2. **Podgląd leada bez oryginalnego tekstu:** przed odebraniem leada fachowiec widzi tylko uporządkowane pola (kategoria, zakres prac, metraż, termin, przybliżona lokalizacja) i krótkie streszczenie wygenerowane przez system. Oryginalny opis i zdjęcia klienta widzi dopiero po odebraniu leada. To najskuteczniejsza ochrona, bo tekst klienta w ogóle nie trafia do fachowca przed zapłatą.
 - Wykryte dane zamieniamy na "[ukryte]" i pokazujemy przyjazny komunikat (ochrona przed spamem), nigdy nie odrzucamy całego tekstu bez wyjaśnienia.
 - **Czat po odebraniu leada:** fachowiec nie może podać kontaktu, dopóki klient nie odpowie w czacie. Po odpowiedzi klienta filtr się wyłącza, a lead przestaje podlegać zwrotowi punktów.
 - **Zdjęcia** (zlecenia i portfolio): automatyczne rozpoznawanie tekstu (OCR) i kodów QR; wykryte dane zamazać albo wysłać do sprawdzenia w panelu admina.

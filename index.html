@@ -2969,34 +2969,100 @@ setupFileAttach('takenLeadAttachBtn', 'takenLeadFileInput', {
 /* ---------- Ochrona przed omijaniem płatności: wykrywanie danych kontaktowych ----------
    UWAGA: w prawdziwej wersji to samo sprawdzanie MUSI działać na serwerze (Supabase),
    bo kontrolę w przeglądarce da się obejść. Tu jest tylko pokaz działania. */
-const NUMBER_WORDS = ['zero','jeden','jedynka','dwa','trzy','cztery','pięć','piec','sześć','szesc','siedem','osiem','dziewięć','dziewiec',
-  'cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve',
-  'one','two','three','four','five','six','seven','eight','nine','oh'];
+// Słowa-liczby w 4 językach (bez polskich znaków - tekst jest wcześniej "spłaszczany")
+const NUMBER_WORDS = new Set((
+  'zero jeden jedna jedno jedynka dwa dwie dwoje trzy cztery piec szesc siedem osiem dziewiec ' +
+  'dziesiec jedenascie dwanascie trzynascie czternascie pietnascie szesnascie siedemnascie osiemnascie dziewietnascie ' +
+  'dwadziescia trzydziesci czterdziesci piecdziesiat szescdziesiat siedemdziesiat osiemdziesiat dziewiecdziesiat ' +
+  'sto dwiescie trzysta czterysta piecset szescset siedemset osiemset dziewiecset ' +
+  'cero uno una dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince ' +
+  'dieciseis diecisiete dieciocho diecinueve veinte veintiuno veintidos veintitres veinticuatro veinticinco ' +
+  'veintiseis veintisiete veintiocho veintinueve treinta cuarenta cincuenta sesenta setenta ochenta noventa ' +
+  'cien ciento doscientos trescientos cuatrocientos quinientos seiscientos setecientos ochocientos novecientos ' +
+  'zero oh one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen ' +
+  'seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred double triple ' +
+  'صفر واحد اثنان اثنين ثلاثة ثلاث أربعة اربعة أربع خمسة خمس ستة ست سبعة سبع ثمانية ثمان تسعة تسع'
+).split(' '));
+// Słowa, które mogą "sklejać" kawałki numeru ("537 i 202", "600 lub 700", "y", "-")
+const BRIDGE_WORDS = new Set(['i','y','e','a','o','oraz','lub','albo','and','or','then','potem','luego','و','-','–','.','/',',',':','+','nr','tel','telf']);
+const EMAIL_PROVIDERS = /\b(gmail|googlemail|hotmail|outlook|live|yahoo|icloud|proton(mail)?|gmx|wp|onet|interia|o2|poczta|mail|email|e-mail|correo)\b/i;
+// Kody, które wyglądają jak "litery+cyfry", ale są normalną treścią zlecenia
+const SAFE_CODES = /^(ral\d{3,4}|ip\d{2}|cat\d[a-z]?|m[23²³]|cm\d*|mm\d*|kw\d*|w\d{1,4}|led\d*|\d+x\d+(x\d+)?|[a-z]{1,2}\d{1,2})$/i;
+
+function flatten(s){
+  return s.toLowerCase().replace(/ł/g,'l').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+function isDate(s){
+  return /^\d{1,2}[.\-\/]\d{1,2}[.\-\/]\d{2,4}$/.test(s) || /^\d{4}-\d{2}-\d{2}$/.test(s) || /^\d{1,2}[:.]\d{2}$/.test(s);
+}
+
 function detectContactInfo(text){
   const token = dict[currentLang].contact_hidden;
   let found = false;
   let t = text.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d)); // cyfry arabskie -> zwykłe
   const hide = (re, test) => { t = t.replace(re, m => { if(test && !test(m)) return m; found = true; return token; }); };
-  // e-mail, także zapisany "at / małpa / arroba"
-  hide(/[\w.+-]+\s*(@|\(at\)|\[at\]|\bat\b|małpa|malpa|arroba)\s*[\w-]+\s*(\.|\bdot\b|kropka|punto)\s*[a-z]{2,}/gi);
-  // linki i komunikatory
+
+  // 1) E-mail (także "at / małpa / arroba") - razem z nazwą użytkownika
+  hide(/[\w.+-]+\s*(@|\(at\)|\[at\]|\bat\b|małpa|malpa|arroba)\s*[\w-]+(\s*(\.|\bdot\b|kropka|punto)\s*[a-z]{2,})?/gi);
+  // 2) Linki, komunikatory, nazwy kont
   hide(/(https?:\/\/|www\.)\S+/gi);
   hide(/\bwa\.me\/\S*/gi);
-  hide(/\b[\w-]+\.(com|es|pl|net|org|eu|info|co\.uk)\b/gi);
-  hide(/(^|\s)@[\w.]{3,}/g);
-  hide(/\b(whats\s?app|whatsap|wasap|watsap|telegram|instagram|insta|facebook|fb|messenger|signal|viber|tiktok)\b/gi);
-  // numery telefonu: min. 8 cyfr, także z odstępami, kropkami, myślnikami (daty są pomijane)
-  hide(/(\+|00)?\d(?:[\s.\-()\/]{0,3}\d){7,}/g, m => {
-    const s = m.trim();
-    if(/^\d{1,2}[.\-\/]\d{1,2}[.\-\/]\d{2,4}$/.test(s) || /^\d{4}-\d{2}-\d{2}$/.test(s)) return false;
-    return s.replace(/\D/g,'').length >= 8;
+  hide(/\b[\w-]+\.(com|es|pl|net|org|eu|info|co\.uk|me)\b/gi);
+  hide(/(^|\s)@[\w.]{2,}/g);
+  hide(/\b(whats\s?app|whatsap|wasap|watsap|wsp|telegram|instagram|insta|ig|facebook|face|fejs|fejsie|fb|messenger|signal|viber|tiktok|snapchat|snap)\b/gi);
+
+  // 3) Nazwy użytkownika: "s.wilar2", "jan_hydraulik", "kowal85" (poza kodami typu RAL9010, 30x60, m2)
+  const mentionsMail = EMAIL_PROVIDERS.test(flatten(text));
+  t = t.replace(/(^|[\s(,;:])([a-z][\w.\-]{2,}[a-z0-9])(?=$|[\s),;:!?])/gi, (m, pre, w) => {
+    if(SAFE_CODES.test(w)) return m;
+    const hasDigit = /\d/.test(w) && /[a-z]/i.test(w);
+    const hasSep = /[a-z][._][a-z0-9]/i.test(w);
+    if(hasDigit || hasSep || (mentionsMail && w.length >= 4 && EMAIL_PROVIDERS.test(flatten(w)))){
+      found = true; return pre + token;
+    }
+    return m;
   });
-  // numery zapisane słownie ("seis cero cero...") - 6 lub więcej słów-cyfr pod rząd
-  const wordRe = new RegExp('(?:\\b(?:' + NUMBER_WORDS.join('|') + ')\\b[\\s,.\\-]*){6,}', 'gi');
-  hide(wordRe);
+  if(mentionsMail) hide(/\b(gmail|googlemail|hotmail|outlook|yahoo|icloud|protonmail|gmx|onet|interia)\b/gi);
+
+  // 4) Numery: ciągi cyfr i słów-liczb (także MIESZANE: "537 dwa zero dwa 3 osiem dwa")
+  //    Liczymy "wagę": każda cyfra = 1, każde słowo-liczba = 1. Ciąg o wadze >= 7 = numer telefonu.
+  const parts = t.split(/(\s+)/);
+  const kind = parts.map(p => {
+    if(/^\s+$/.test(p) || p === '') return 'space';
+    const core = p.replace(/^[("'«]+|[)"'»,;:!?]+$/g, '');
+    if(isDate(core)) return 'break';
+    const f = flatten(core);
+    if(/^\+?[\d.\-\/()]+$/.test(core) && /\d/.test(core)) return {w: core.replace(/\D/g,'').length};
+    if(NUMBER_WORDS.has(f) || NUMBER_WORDS.has(core)) return {w: 1};
+    // słowa sklejone myślnikiem: "dwa-zero-dwa"
+    if(/[-–]/.test(f) && f.split(/[-–]/).every(x => NUMBER_WORDS.has(x) || /^\d+$/.test(x)))
+      return {w: f.split(/[-–]/).reduce((s,x)=> s + (/^\d+$/.test(x) ? x.length : 1), 0)};
+    if(BRIDGE_WORDS.has(f) || BRIDGE_WORDS.has(core)) return 'bridge';
+    return 'break';
+  });
+  const masks = [];
+  let start = -1, weight = 0, lastNum = -1, bridges = 0;
+  const close = () => { if(start >= 0 && weight >= 7) masks.push([start, lastNum]); start = -1; weight = 0; lastNum = -1; bridges = 0; };
+  kind.forEach((k, i) => {
+    if(k === 'space') return;
+    if(typeof k === 'object'){ if(start < 0) start = i; weight += k.w; lastNum = i; bridges = 0; return; }
+    if(k === 'bridge' && start >= 0 && bridges < 2){ bridges++; return; }
+    close();
+  });
+  close();
+  for(let m = masks.length - 1; m >= 0; m--){
+    const [a, b] = masks[m];
+    parts.splice(a, b - a + 1, token);
+    found = true;
+  }
+  t = parts.join('');
+
+  t = t.split(token + ' com').join(token).split(token + ' es').join(token).split(token + ' pl').join(token);
   while(t.includes(token + token)) t = t.split(token + token).join(token);
+  t = t.replace(new RegExp('(' + token.replace(/[\[\]]/g,'\\$&') + '\\s*){2,}','g'), token + ' ').trim();
   return { found, masked: t };
 }
+
 function showGuardNote(anchorEl, key){
   if(!anchorEl) return;
   const holder = anchorEl.closest('.chat-input, .chat-input-row') || anchorEl;
